@@ -3,3 +3,8 @@
 
 en:
   hello: "Hello world"
+  admin:
+    shoes:
+      show:
+        colors: "Colors"
+        sizes: "Sizes"
