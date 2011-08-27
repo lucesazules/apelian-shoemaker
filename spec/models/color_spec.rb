@@ -2,6 +2,10 @@ require 'spec_helper'
 
 describe Color do
 
+  before do
+    Factory(:color)
+  end
+
   it "should have a name" do
     should validate_presence_of :name
   end

@@ -5,5 +5,5 @@ class ColorsShoe < ActiveRecord::Base
   validates_presence_of :color
   validates_presence_of :shoe
 
-  validates_uniqueness_of :color, :scoped_to => :shoe
+  validates_uniqueness_of :color_id, :scope => :shoe_id
 end

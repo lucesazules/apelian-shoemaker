@@ -33,6 +33,10 @@ module ApelianShoemaker
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
 
+    config.generators do |g|
+      g.test_framework :rspec
+    end
+
     # Configure the default encoding used in templates for Ruby 1.9.
     config.encoding = "utf-8"
 

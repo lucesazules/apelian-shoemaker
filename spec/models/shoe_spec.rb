@@ -2,6 +2,10 @@ require 'spec_helper'
 
 describe Shoe do
 
+  before do
+    Factory(:shoe)
+  end
+
   it "should have an article_number" do
     should validate_presence_of :article_number
   end
@@ -17,6 +21,8 @@ describe Shoe do
     should have_many(:colors).through(:colors_shoes)
   end
 
-  it "is available in many seizes"
+  it "is available in many seizes" do
+    should have_many(:sizes).through(:shoes_sizes)
+  end
 
 end
