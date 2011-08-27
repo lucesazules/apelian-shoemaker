@@ -1,0 +1,6 @@
+= Active Admin
+
+To register a resource run
+
+    rails generate active_admin:resource [MyModelName]
+
