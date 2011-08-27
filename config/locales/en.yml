@@ -3,8 +3,11 @@
 
 en:
   hello: "Hello world"
+  shoe:
+    colors: "Colors"
+    sizes: "Sizes"
+    heel: "Heel"
   admin:
     shoes:
       show:
-        colors: "Colors"
-        sizes: "Sizes"
+        characteristics: "Characteristics"
