@@ -82,7 +82,4 @@ describe Shoe do
     end
   end
 
-  it "should have a photo"
-
-
 end

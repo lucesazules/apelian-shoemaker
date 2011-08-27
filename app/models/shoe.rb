@@ -1,5 +1,13 @@
 # encoding: UTF-8
 class Shoe < ActiveRecord::Base
+
+
+  has_attached_file :photo,
+                    :styles => { :medium => "300x300>", :thumb => "100x100>" },
+                    :storage => :s3,
+                    :s3_credentials => "#{Rails.root}/config/s3.yml",
+                    :path => "shoe/photo/:style/:id/:filename"
+
   validates_presence_of :article_number
   validates_presence_of :name
 
@@ -21,6 +29,7 @@ class Shoe < ActiveRecord::Base
     "#{season_name}-#{year}"
   end
 
+  # sets campaign name, year and season_name
   def campaign=(string)
     self.year, self.season_name = self.class.parse_campaign_name(string)
   end

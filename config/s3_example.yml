@@ -1,0 +1,4 @@
+development:
+  bucket: bucket_name
+  access_key_id: xxx
+  secret_access_key: xxx
