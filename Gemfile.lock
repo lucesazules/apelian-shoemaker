@@ -70,11 +70,11 @@ GEM
     faker (0.9.5)
       i18n (~> 0.4)
     fastercsv (1.5.4)
-    ffi (1.0.9)
     formtastic (1.2.4)
       actionpack (>= 2.3.7)
       activesupport (>= 2.3.7)
       i18n (~> 0.4)
+    growl (1.0.3)
     guard (0.6.2)
       thor (~> 0.14.6)
     guard-rspec (0.4.2)
@@ -90,8 +90,6 @@ GEM
       thor (~> 0.14)
     kaminari (0.12.4)
       rails (>= 3.0.0)
-    libnotify (0.5.7)
-      ffi (= 1.0.9)
     libv8 (3.3.10.2)
     mail (2.3.0)
       i18n (>= 0.4.0)
@@ -135,8 +133,7 @@ GEM
       rdoc (~> 3.4)
       thor (~> 0.14.6)
     rake (0.9.2)
-    rb-inotify (0.8.6)
-      ffi (>= 0.5.0)
+    rb-fsevent (0.4.3.1)
     rdoc (3.9.4)
     responders (0.6.4)
     rspec (2.6.0)
@@ -191,13 +188,13 @@ DEPENDENCIES
   execjs
   factory_girl_rails
   faker
+  growl
   guard-rspec
   jquery-rails
-  libnotify
   meta_search (>= 1.1.0.pre)
   paperclip
   rails (= 3.1.0.rc6)
-  rb-inotify
+  rb-fsevent
   rspec-rails
   sass-rails (~> 3.1.0.rc)
   shoulda
