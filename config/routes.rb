@@ -1,4 +1,12 @@
 ApelianShoemaker::Application.routes.draw do
+  get "shoes/index"
+
+  get "shoes/show"
+
+  get "shoes/tendencies"
+
+  get "pages/contact"
+
   ActiveAdmin.routes(self)
 
   devise_for :admin_users, ActiveAdmin::Devise.config
