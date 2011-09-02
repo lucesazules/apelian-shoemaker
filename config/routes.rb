@@ -1,11 +1,5 @@
 ApelianShoemaker::Application.routes.draw do
-  get "shoes/index"
-
-  get "shoes/show"
-
-  get "shoes/tendencies"
-
-  get "pages/contact"
+  resources :shoes
 
   ActiveAdmin.routes(self)
 
