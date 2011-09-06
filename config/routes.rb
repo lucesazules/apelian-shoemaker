@@ -1,7 +1,10 @@
 ApelianShoemaker::Application.routes.draw do
-  get "shoes/tendencies"
 
-  resources :shoes
+  resources :shoes do
+    collection do
+      get :tendencies
+    end
+  end
 
   get "pages/index"
   
@@ -12,6 +15,8 @@ ApelianShoemaker::Application.routes.draw do
   ActiveAdmin.routes(self)
 
   devise_for :admin_users, ActiveAdmin::Devise.config
+
+  root :to => "pages#index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
