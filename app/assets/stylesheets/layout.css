@@ -1,0 +1,104 @@
+/* General Styles */
+
+body hr {
+	margin:0px 0px 0px 0px;
+	border-style: dashed;
+	border-color:#FFF;
+}
+
+body ul{
+	list-style:none outside none;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size:11px;
+	font-weight: bold;
+	color:#FFF;
+}
+
+/* Background Styles */
+
+.full_background {
+	position:fixed;
+	width:100%;
+	height:100%;
+}
+
+#pages_index .full_background {
+		background: url('bg_escalator_red.jpg') no-repeat top left fixed;
+		-webkit-background-size: cover;
+	    -moz-background-size: cover;
+	    -o-background-size: cover;
+	    background-size: cover;
+}
+
+#pages_contact .full_background {
+		background: url('bg_exit.jpg') no-repeat top left fixed;
+		-webkit-background-size: cover;
+	    -moz-background-size: cover;
+	    -o-background-size: cover;
+	    background-size: cover;
+}
+
+#shoes_index .full_background {
+		background: url('bg_escalator_green.jpg') no-repeat top left fixed;
+		-webkit-background-size: cover;
+	    -moz-background-size: cover;
+	    -o-background-size: cover;
+	    background-size: cover;
+}
+
+#shoes_show .full_background {
+		background: url('bg_escalator_green.jpg') no-repeat top left fixed;
+		-webkit-background-size: cover;
+	    -moz-background-size: cover;
+	    -o-background-size: cover;
+	    background-size: cover;
+}
+
+#shoes_tendencies .full_background {
+		background: url('bg_city.jpg') no-repeat top left fixed;
+		-webkit-background-size: cover;
+	    -moz-background-size: cover;
+	    -o-background-size: cover;
+	    background-size: cover;
+}
+
+/* Page Layout Styles */
+
+.page_container {
+	display:block;
+	width:1097px;
+	height:555px;
+	padding:0px 80px 0px 80px;
+}
+
+header {
+	display:block;
+	width:100%;
+	height:100px;
+}
+
+#main {
+	display:block;
+	width:100%;
+	height:445px;
+}
+
+#sidebar {
+	float:left;
+	display:block;
+	width:180px;
+	height:100%;
+}
+
+#content {
+	float:left;
+	display:block;
+	width:917px;
+	height:100%;
+}
+
+footer {
+	display:block;
+	width:100%;
+	height:73px;
+}

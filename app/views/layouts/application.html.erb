@@ -6,9 +6,26 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-
-<%= yield %>
-
+<body id="<%= body_id %>">
+	<div class="full_background scalable">
+	<div class="page_container">
+		<header>
+			<%= render 'layouts/header' %>
+		</header>
+		<hr/>
+		<section id="main">
+			<section id="sidebar">
+				<%= render 'layouts/sidebar' %>				
+			</section>
+			<section id="content">
+				<%= yield %>
+			</section>
+		</section>
+		<hr/>
+		<footer>
+			<%= render 'layouts/footer' %>
+		</footer>
+	</div><!-- .page_container -->
+	</div><!-- .full_background -->
 </body>
 </html>

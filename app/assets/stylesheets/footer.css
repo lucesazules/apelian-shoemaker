@@ -1,0 +1,9 @@
+footer img[alt="Logo_blgdd"] {
+	float:left;
+	margin-top:12px;
+}
+
+footer img[alt="Icon_mail"], img[alt="Icon_music"] {
+	float:right;
+	margin-top:12px;
+}

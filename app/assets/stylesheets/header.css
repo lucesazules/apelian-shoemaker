@@ -1,0 +1,9 @@
+header .contact_data {
+	float:left;
+	margin-top:32px;
+}
+
+header .navigation {
+	float:right;
+	margin-top:32px;
+}
