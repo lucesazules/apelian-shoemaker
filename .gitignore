@@ -7,3 +7,4 @@ tmp/
 .rvmrc
 config/s3.yml
 public/system/
+Gemfile.lock

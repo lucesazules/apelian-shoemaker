@@ -8,6 +8,7 @@ gem 'therubyracer'
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
+gem 'pg', :group => :production # requested by heroku
 
 gem 'activeadmin'
 gem 'meta_search', '>= 1.1.0.pre'
