@@ -23,6 +23,8 @@ end
 
 gem 'jquery-rails'
 
+gem 'heroku', :group => :development
+
 group :development, :test do
   gem 'sqlite3'
   gem 'yard'
