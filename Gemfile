@@ -1,13 +1,14 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.0.rc6'
+gem 'rails', '3.1.0'
 gem 'execjs'
 gem 'therubyracer'
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+gem 'sqlite3', :group => [:test, :development]
+gem 'pg', :group => :production # requested by heroku
 
 gem 'activeadmin'
 gem 'meta_search', '>= 1.1.0.pre'
@@ -16,12 +17,14 @@ gem 'paperclip'
 gem 'aws-s3'
 
 group :assets do
-  gem 'sass-rails', "  ~> 3.1.0.rc"
+  gem 'sass-rails', "~> 3.1.0.rc"
   gem 'coffee-rails', "~> 3.1.0.rc"
   gem 'uglifier'
 end
 
 gem 'jquery-rails'
+
+gem 'heroku', :group => :development
 
 group :development, :test do
   gem 'sqlite3'
