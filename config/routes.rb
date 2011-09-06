@@ -1,13 +1,10 @@
 ApelianShoemaker::Application.routes.draw do
   resources :shoes
 
-<<<<<<< HEAD
-=======
   get "pages/index"
   
   get "pages/contact"
   
->>>>>>> Created Layout, Partials, Basic Styles and Merged Routes with Alt Version
   ActiveAdmin.routes(self)
 
   devise_for :admin_users, ActiveAdmin::Devise.config
