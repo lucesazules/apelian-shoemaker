@@ -1,0 +1,65 @@
+#sidebar .logo {
+	margin-top:20px;
+}
+
+
+#sidebar ul {
+	margin-top:35px;
+}
+
+#sidebar ul li {
+	display:block;
+	width:178px;
+	height:30px;
+	border-width: 1px;
+	border-style: dashed;
+	border-color: rgb(255, 252, 0); /* Fallback */
+	background: rgb(0, 122, 66); /* Fallback */
+  	background: rgba(0, 122, 66, 0.7);
+	margin-bottom:12px;
+}
+
+#sidebar ul li:first-child {
+	height:50px;
+	margin-bottom:44px;
+	background: rgb(0, 122, 66); /* Fallback */
+  	background: rgba(0, 190, 60, 0.7);
+}
+
+#sidebar ul li a {
+	display:inline-block;
+	vertical-align: top;
+	width:100%;
+	height:100%;
+	text-decoration: none;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size:11px;
+	font-weight: normal;
+	color:#FFF;
+}
+
+#sidebar ul li a span {
+	display:inline-block;
+	vertical-align: top;
+	margin: 9px 0px 0px 14px;
+}
+
+/* Adaptative Menu Backgrounds */
+
+#shoes_index #sidebar ul li:nth-child(2) {
+	background: rgb(133, 153, 44); /* Fallback */
+	background: rgba(133, 153, 44, 0.7);
+}
+
+#pages_form #sidebar ul li:first-child {
+	background: rgb(201, 0, 74); /* Fallback */
+	background: rgba(201, 0, 74, 0.7);
+}
+
+/* Body Class dependant Atributes */
+
+#pages_contact #sidebar ul li, #pages_form #sidebar ul li, #shoes_tendencies #sidebar ul li {
+	border-color: rgb(244, 251, 255); /* Fallback */
+	background: rgb(25, 25, 25); /* Fallback */
+  	background: rgba(25, 25, 25, 0.7);
+}

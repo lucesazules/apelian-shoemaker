@@ -30,6 +30,14 @@ body ul{
 	    background-size: cover;
 }
 
+#pages_form .full_background {
+		background: url('bg_exit.jpg') no-repeat top left fixed;
+		-webkit-background-size: cover;
+	    -moz-background-size: cover;
+	    -o-background-size: cover;
+	    background-size: cover;
+}
+
 #pages_contact .full_background {
 		background: url('bg_exit.jpg') no-repeat top left fixed;
 		-webkit-background-size: cover;

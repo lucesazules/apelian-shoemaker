@@ -1,7 +1,11 @@
 ApelianShoemaker::Application.routes.draw do
+  get "shoes/tendencies"
+
   resources :shoes
 
   get "pages/index"
+  
+  get "pages/form"
   
   get "pages/contact"
   
