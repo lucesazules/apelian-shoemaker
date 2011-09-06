@@ -6,4 +6,5 @@ footer img[alt="Logo_blgdd"] {
 footer img[alt="Icon_mail"], img[alt="Icon_music"] {
 	float:right;
 	margin-top:12px;
+	margin-left:18px;
 }
