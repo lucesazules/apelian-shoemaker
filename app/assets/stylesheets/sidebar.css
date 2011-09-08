@@ -11,6 +11,7 @@
 }
 
 #sidebar ul li {
+	position:relative;
 	display:block;
 	width:178px;
 	height:30px;
@@ -74,30 +75,26 @@
 
 /* Arrow Span Styles */
 
-#selection_arrow {
-	display:block;
+#main_menu ul .selected:first-child:after {
+	content:'';
+	display:inline-block;
 	width:15px;
 	height:20px;
 	position:absolute;
+	top:15px;
+	left:188px;
 	margin: 0px 0px 0px 0px;
 	background-image: url('icon_arrow_white.png');
 }
 
-#shoes_index #selection_arrow {
-	top:102px;
+#main_menu ul .selected:after {
+	content:'';
+	display:inline-block;
+	width:15px;
+	height:20px;
+	position:absolute;
+	top:5px;
 	left:188px;
-}
-
-#pages_form #selection_arrow {
-	top:16px;
-	left:188px;
-}
-
-#shoes_tendencies #selection_arrow {
-	top:234px;
-	left:188px;
-}
-
-#pages_contact #selection_arrow {
-	display:none;
+	margin: 0px 0px 0px 0px;
+	background-image: url('icon_arrow_white.png');
 }

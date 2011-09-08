@@ -2,7 +2,7 @@ ApelianShoemaker::Application.routes.draw do
 
   resources :shoes do
     collection do
-      get :tendencies
+      get :trend
     end
   end
 

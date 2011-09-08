@@ -1,11 +1,10 @@
 <%= image_tag('logo_apelian_w180px.png', :class => "logo", :size => "180x103", :alt => "Apelian Shoe-Maker") %>	
-<nav>
-	<div id="selection_arrow"></div>
+<nav id="main_menu">
 	<ul>
-		<li><%= link_to(content_tag(:span, "COMPLETE<br/>SU FORMULARIO<br/>DE COMPRA".html_safe), "#") %></li>
-		<li><%= link_to(content_tag(:span, "TACO BAJO"), "#") %></li>
-		<li><%= link_to(content_tag(:span, "TACO MEDIO"), "#") %></li>
-		<li><%= link_to(content_tag(:span, "TACO ALTO"), "#") %></li>
-		<li><%= link_to(content_tag(:span, "TENDENCIA"), "#") %></li>
+		<li class="selected"><%= link_to(content_tag(:span, "COMPLETE<br/>SU FORMULARIO<br/>DE COMPRA".html_safe), "#") %></li>
+		<li class="selected"><%= link_to(content_tag(:span, "TACO BAJO"), "#") %></li>
+		<li class="selected"><%= link_to(content_tag(:span, "TACO MEDIO"), "#") %></li>
+		<li class="selected"><%= link_to(content_tag(:span, "TACO ALTO"), "#") %></li>
+		<li class="selected"><%= link_to(content_tag(:span, "TENDENCIA"), "#") %></li>
 	</ul>
 </nav>

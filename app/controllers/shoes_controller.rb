@@ -7,7 +7,7 @@ class ShoesController < ApplicationController
     @shoe = Shoe.find(params[:id])
   end
 
-  def tendencies
+  def trend
     @shoes = Shoe.all
   end
 end
