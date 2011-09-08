@@ -6,12 +6,9 @@ ApelianShoemaker::Application.routes.draw do
     end
   end
 
-  get "pages/index"
-  
-  get "pages/form"
-  
-  get "pages/contact"
-  
+  match "form" => "pages#form", :as => :request_form
+  match "contact" => "pages#contact", :as => :contact
+
   ActiveAdmin.routes(self)
 
   devise_for :admin_users, ActiveAdmin::Devise.config

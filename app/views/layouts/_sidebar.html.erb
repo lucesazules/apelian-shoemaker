@@ -1,10 +1,10 @@
 <%= image_tag('logo_apelian_w180px.png', :class => "logo", :size => "180x103", :alt => "Apelian Shoe-Maker") %>
 <nav id="main_menu">
 	<ul>
-		<li><%= link_to(content_tag(:span, "COMPLETE<br/>SU FORMULARIO<br/>DE COMPRA".html_safe), "#") %></li>
+		<li><%= link_to(content_tag(:span, "COMPLETE<br/>SU FORMULARIO<br/>DE COMPRA".html_safe), request_form_path) %></li>
       <%- Shoe::HEELS.each do |heel| -%>
           <li <%= "class='selected'" if heel_selected?(heel) %>><%= link_to_heel(heel) %></li>
       <%- end -%>
-		<li><%= link_to(content_tag(:span, "TENDENCIA"), "#") %></li>
+		<li><%= link_to(content_tag(:span, "TENDENCIA"), trend_shoes_path) %></li>
 	</ul>
 </nav>
