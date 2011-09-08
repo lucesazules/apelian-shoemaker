@@ -17,7 +17,10 @@ class Shoe < ActiveRecord::Base
   has_many :shoes_sizes
   has_many :sizes, :through => :shoes_sizes
 
-  HEELS = %W(sin-taco bajo medio alto)
+  LOW_HEEL = 'bajo'
+  MED_HEEL = 'medio'
+  HIGH_HEEL = 'alto'
+  HEELS = [LOW_HEEL, MED_HEEL, HIGH_HEEL]
   validates_inclusion_of :heel, :in => HEELS
 
   SEASON_NAMES = %W(primavera verano otoño invierno)

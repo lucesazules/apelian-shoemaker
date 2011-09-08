@@ -1,6 +1,8 @@
 class ShoesController < ApplicationController
+
   def index
-    @shoes = Shoe.all
+    @search = Shoe.search(params[:search])
+    @shoes = @search.all
   end
 
   def show
@@ -10,4 +12,5 @@ class ShoesController < ApplicationController
   def trend
     @shoes = Shoe.all
   end
+
 end
