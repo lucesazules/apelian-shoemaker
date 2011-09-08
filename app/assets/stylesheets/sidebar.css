@@ -1,4 +1,4 @@
-#sidebar .logo {
+body #sidebar .logo {
 	margin-top:20px;
 }
 
@@ -55,19 +55,19 @@
 	background: rgba(133, 153, 44, 0.7);
 }
 
-#pages_form #sidebar ul li:first-child, #shoes_tendencies #sidebar ul li:nth-child(5) {
+#pages_form #sidebar ul li:first-child, #shoes_trend #sidebar ul li:nth-child(5) {
 	background: rgb(201, 0, 74); /* Fallback */
 	background: rgba(201, 0, 74, 0.7);
 }
 
 /* Body Class dependant Atributes */
 
-#shoes_tendencies #sidebar ul li:first-child {
+#shoes_trend #sidebar ul li:first-child {
 	background: rgb(201, 0, 74); /* Fallback */
 	background: rgba(201, 0, 74, 0.7);
 }
 
-#pages_contact #sidebar ul li, #pages_form #sidebar ul li, #shoes_tendencies #sidebar ul li {
+#pages_contact #sidebar ul li, #pages_form #sidebar ul li, #shoes_trend #sidebar ul li {
 	border-color: rgb(244, 251, 255); /* Fallback */
 	background: rgb(25, 25, 25); /* Fallback */
   	background: rgba(25, 25, 25, 0.7);

@@ -1,7 +1,21 @@
 /* pages#index */
 
-img[alt="Text_intro"] {
+#pages_index img[alt="Text_intro"] {
 	position:absolute;
 	top:20px;
 	left:258px;
+}
+
+#pages_contact #inner_content {
+	width:auto;
+	height:auto;
+	margin:20px;
+	background:white;
+}
+
+#pages_form #inner_content {
+	width:auto;
+	height:auto;
+	margin:20px;
+	background:white;
 }
