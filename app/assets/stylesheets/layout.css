@@ -101,6 +101,7 @@ header {
 #content {
 	float:left;
 	display:block;
+	position:relative;
 	width:917px;
 	height:100%;
 }
