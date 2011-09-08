@@ -50,12 +50,12 @@ body #sidebar .logo {
 
 /* Adaptative Menu Backgrounds */
 
-#shoes_index #sidebar ul li:nth-child(2) {
+#shoes_index #sidebar ul .selected, #shoes_shoes #sidebar ul .selected  {
 	background: rgb(133, 153, 44); /* Fallback */
 	background: rgba(133, 153, 44, 0.7);
 }
 
-#pages_form #sidebar ul li:first-child, #shoes_trend #sidebar ul li:nth-child(5) {
+#pages_form #sidebar ul .selected, #shoes_trend #sidebar ul .selected {
 	background: rgb(201, 0, 74); /* Fallback */
 	background: rgba(201, 0, 74, 0.7);
 }
