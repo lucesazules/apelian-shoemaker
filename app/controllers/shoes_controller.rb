@@ -2,7 +2,7 @@ class ShoesController < ApplicationController
 
   def index
     @search = Shoe.search(params[:search])
-    @shoes = @search.all
+    @shoes = @search.page(params[:page]).per(25) # TODO in view put <%= paginate @shoes %>
   end
 
   def show

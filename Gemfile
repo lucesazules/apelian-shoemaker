@@ -23,6 +23,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'kaminari' # pagination
 
 gem 'heroku', :group => :development
 
