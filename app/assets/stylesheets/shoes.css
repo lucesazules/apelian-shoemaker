@@ -79,6 +79,11 @@
 }
 
 /* page navigation */
+#shoes_show #shoe_detail .page_navigation {
+	background:transparent;
+	border-width: 0px;
+}
+
 
 #shoes_show .page_navigation li.right {
 	position:absolute;
