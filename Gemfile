@@ -44,10 +44,10 @@ group :test do
   gem 'guard-rspec'
 
   # guard notifications on MAC OS X
-  gem 'rb-fsevent', :require => false if RUBY_PLATFORM =~ /darwin/i
-  gem 'growl', :require => false if RUBY_PLATFORM =~ /darwin/i
+  gem 'rb-fsevent', :require => false #  if RUBY_PLATFORM =~ /darwin/i
+  gem 'growl', :require => false # if RUBY_PLATFORM =~ /darwin/i
 
   # guard notifications on Linux
-  gem 'rb-inotify', :require => false if RUBY_PLATFORM =~ /linux/i
-  gem 'libnotify', :require => false if RUBY_PLATFORM =~ /linux/i
+  gem 'rb-inotify', :require => false # if RUBY_PLATFORM =~ /linux/i
+  gem 'libnotify', :require => false # if RUBY_PLATFORM =~ /linux/i
 end
