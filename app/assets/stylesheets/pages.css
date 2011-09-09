@@ -7,8 +7,50 @@
 }
 
 #pages_contact #inner_content {
-
+		width:811px;
+		height:403px;
+		margin-left:86px;
+		border-width: 1px;
+		border-style: dashed;
+		border-color: rgb(244, 251, 255); /* Fallback */
+		border-color: rgba(244, 251, 255, 0.3);
+		background: rgb(150, 150, 150); /* Fallback */
+	  	background: rgba(150, 150, 150, 0.3);
 }
+
+/* pages#contact */
+
+#pages_contact #inner_content h4 {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size:13px;
+	font-weight: bold;
+	color:#FFF;
+	margin-top:84px;
+	margin-left:35px;
+}
+
+#pages_contact #inner_content ul {
+	margin-top:25px;
+	margin-left:35px;
+}
+
+#pages_contact #inner_content ul li {
+	display:block;
+	width:340px;
+	height:30px;
+	border-width: 1px;
+	border-style: dashed;
+	border-color: rgb(244, 251, 255); /* Fallback */
+	background: rgb(25, 25, 25); /* Fallback */
+  	background: rgba(25, 25, 25, 0.5);
+	margin-bottom:12px;
+	padding-top:11px;
+	padding-left:20px;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size:11px;
+}
+
+
 
 #pages_form #inner_content {
 
