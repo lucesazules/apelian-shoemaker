@@ -37,8 +37,15 @@ header .navigation li a span { /* ToDo: DRY this up */
 	margin: 9px 0px 0px 14px;
 }
 
-#pages_contact header .navigation li, #pages_form header .navigation li, #shoes_tendencies header .navigation li {
+#pages_contact header .navigation li, #pages_form header .navigation li, #shoes_trend header .navigation li {
 	border-color: rgb(244, 251, 255); /* Fallback */
 	background: rgb(25, 25, 25); /* Fallback */
   	background: rgba(25, 25, 25, 0.7);
+}
+
+/* Disable link / not in IE */
+
+header .navigation li a {
+       pointer-events: none;
+       cursor: default;
 }
