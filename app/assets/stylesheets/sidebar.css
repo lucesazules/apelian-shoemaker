@@ -50,27 +50,50 @@ body #sidebar .logo {
 
 /* Adaptative Menu Backgrounds */
 
-#shoes_index #sidebar ul .selected, #shoes_shoes #sidebar ul .selected  {
+#shoes_index #sidebar ul .selected {
 	background: rgb(133, 153, 44); /* Fallback */
 	background: rgba(133, 153, 44, 0.7);
 }
 
-#pages_form #sidebar ul .selected, #shoes_trend #sidebar ul .selected {
-	background: rgb(201, 0, 74); /* Fallback */
-	background: rgba(201, 0, 74, 0.7);
+#shoes_shoes #sidebar ul .selected {
+	background: rgb(133, 153, 44); /* Fallback */
+	background: rgba(133, 153, 44, 0.7);	
 }
 
-/* Body Class dependant Atributes */
+#shoes_trend #sidebar ul li {
+	border-color: rgb(244, 251, 255); /* Fallback */
+	background: rgb(25, 25, 25); /* Fallback */
+  	background: rgba(25, 25, 25, 0.7);	
+}
 
 #shoes_trend #sidebar ul li:first-child {
 	background: rgb(201, 0, 74); /* Fallback */
 	background: rgba(201, 0, 74, 0.7);
 }
 
-#pages_contact #sidebar ul li, #pages_form #sidebar ul li, #shoes_trend #sidebar ul li {
+#shoes_trend #sidebar ul li.selected {
+	background: rgb(201, 0, 74); /* Fallback */
+	background: rgba(201, 0, 74, 0.7);
+}
+
+/* PAges */
+
+
+#pages_contact #sidebar ul li {
 	border-color: rgb(244, 251, 255); /* Fallback */
 	background: rgb(25, 25, 25); /* Fallback */
   	background: rgba(25, 25, 25, 0.7);
+}
+
+#pages_form #sidebar ul li {
+	border-color: rgb(244, 251, 255); /* Fallback */
+	background: rgb(25, 25, 25); /* Fallback */
+  	background: rgba(25, 25, 25, 0.7);	
+}
+
+#pages_form #sidebar ul li:first-child {
+	background: rgb(201, 0, 74); /* Fallback */
+	background: rgba(201, 0, 74, 0.7);
 }
 
 /* Arrow Span Styles */

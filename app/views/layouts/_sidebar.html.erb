@@ -5,6 +5,6 @@
       <%- Shoe::HEELS.each do |heel| -%>
           <li <%= "class='selected'" if heel_selected?(heel) %>><%= link_to_heel(heel) %></li>
       <%- end -%>
-		<li><%= link_to(content_tag(:span, "TENDENCIA"), trend_shoes_path) %></li>
+		<li <%= "class='selected'" if body_id == 'shoes_trend' %>><%= link_to(content_tag(:span, "TENDENCIA"), trend_shoes_path) %></li>
 	</ul>
 </nav>
