@@ -1,13 +1,6 @@
 # encoding: UTF-8
 class Shoe < ActiveRecord::Base
 
-
-  has_attached_file :photo,
-                    :styles => { :medium => "300x300>", :thumb => "124x124>" },
-                    :storage => :s3,
-                    :s3_credentials => "#{Rails.root}/config/s3.yml",
-                    :path => "shoe/photo/:style/:id/:filename"
-
   validates_presence_of :article_number
   validates_presence_of :name
 
@@ -45,6 +38,17 @@ class Shoe < ActiveRecord::Base
     q_year, q_season_name = parse_campaign_name(campaign)
     where(:year => q_year, :season_name => q_season_name)
   end
+
+  has_attached_file :photo,
+                    :styles => { :medium => "300x300>", :thumb => "124x124>" },
+                    :storage => :s3,
+                    :s3_credentials => "#{Rails.root}/config/s3.yml",
+                    :path => "shoe/photo/:style/:id/:filename"
+
+  has_attached_file :photo_manual_thumb,
+                    :storage => :s3,
+                    :s3_credentials => "#{Rails.root}/config/s3.yml",
+                    :path => "/shoe/photo_manual_thumb/:style/:id/:filename"
 
   private
   # parses string to get season_name and year
