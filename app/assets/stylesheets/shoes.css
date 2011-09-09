@@ -18,8 +18,86 @@
 
 /* shoes show */
 
-#shoes_show  {
+#shoes_show #inner_content {
 
+}
+
+#shoes_show #shoe_reel {
+	float:left;
+	width:126px;
+	height:395px;
+	margin-right:11px;
+}
+
+#shoes_show #shoe_reel li {
+	overflow:hidden;
+	width:124px;
+	height:124px;
+	border-width: 1px;
+	border-style: dashed;	
+	border-color: rgb(244, 251, 255); /* Fallback */
+	border-color: rgba(244, 251, 255, 0.6); /* Fallback */
+	margin-bottom:11px;
+}
+
+#shoes_show #shoe_detail {
+	position:relative;
+	float:left;
+	width:688px;
+	height:398px;
+	border-width: 1px;
+	border-style: dashed;	
+	border-color: rgb(244, 251, 255); /* Fallback */
+	border-color: rgba(244, 251, 255, 0.6); /* Fallback */
+}
+
+#shoes_show #shoe_detail ul {
+	overflow:hidden;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size:11px;
+	font-weight: normal;
+	color:rgb(35, 31, 32);
+	background:#FFF;
+	border-width: 1px;
+	border-style: dashed;	
+	border-color: rgb(35, 31, 32); /* Fallback */
+	border-color: rgba(35, 31, 32, 0.6); /* Fallback */
+}
+
+#shoes_show .catalog_page {
+	position:absolute;
+	top:15px;
+	right:11px;
+	z-index: 10;
+	display:block;
+	width:47px;
+	height:17px;
+	padding-top:7px;
+	padding-left:7px;
+}
+
+/* page navigation */
+
+#shoes_show .page_navigation li.right {
+	position:absolute;
+	top:190px;
+	right:14px;
+	z-index: 10;
+	display:block;
+	width:15px;
+	height:20px;
+	background:url('icon_arrow_black_right.png');
+}
+
+#shoes_show .page_navigation li.left {
+	position:absolute;
+	top:190px;
+	left:14px;
+	z-index: 10;
+	display:block;
+	width:15px;
+	height:20px;
+	background-image: url('icon_arrow_black_left.png');
 }
 
 /* shoes trend */
