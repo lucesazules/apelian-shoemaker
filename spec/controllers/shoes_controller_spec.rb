@@ -2,6 +2,7 @@ require 'spec_helper'
 
 describe ShoesController do
   render_views(true)
+
   describe "GET 'index'" do
     before do
       get :index
@@ -24,10 +25,14 @@ describe ShoesController do
     end
   end
 
-  describe "GET 'tendencies'" do
-    pending "should be successful" do
+  describe "GET 'trend'" do
+    before do
+      get :trend
+    end
+    it "should be successful" do
       response.should be_success
     end
+    it { should assign_to(:shoes) }
   end
 
 end

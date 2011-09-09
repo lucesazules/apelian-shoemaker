@@ -27,6 +27,8 @@ class Shoe < ActiveRecord::Base
   validates_inclusion_of :season_name, :in => SEASON_NAMES
   validates_numericality_of :year, :greater_than_or_equal_to => 1900, :less_than_or_equal_to => 2100
 
+  scope :trend, where("year > #{Time.zone.now.year}")
+
   # @return [String] campaign name
   def campaign
     "#{season_name}-#{year}"

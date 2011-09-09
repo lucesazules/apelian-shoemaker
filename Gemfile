@@ -25,7 +25,11 @@ end
 gem 'jquery-rails'
 gem 'kaminari' # pagination
 
-gem 'heroku', :group => :development
+group :development do
+  gem 'heroku'
+  gem 'taps'
+end
+
 
 group :development, :test do
   gem 'sqlite3'

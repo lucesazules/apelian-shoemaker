@@ -1,61 +1,6 @@
 <section id="inner_content">
-	<ul class="shoe_catalog">
-		<li id=""> <!-- ToDO: insert shoe_id -->
-			<%= link_to(image_tag('580.jpg', :class => "product_thumb", :size => "124x124", :alt => "shoe.name"), "#") %>
-		</li>
-		<li id="">
-			<%= link_to(image_tag('580.jpg', :class => "product_thumb", :size => "124x124", :alt => "shoe.name"), "#") %>
-		</li>
-		<li id="">
-			<%= link_to(image_tag('580.jpg', :class => "product_thumb", :size => "124x124", :alt => "shoe.name"), "#") %>
-		</li>
-		<li id="">
-			<%= link_to(image_tag('580.jpg', :class => "product_thumb", :size => "124x124", :alt => "shoe.name"), "#") %>
-		</li>
-		<li id="">
-			<%= link_to(image_tag('580.jpg', :class => "product_thumb", :size => "124x124", :alt => "shoe.name"), "#") %>
-		</li>
-		<li id="">
-			<%= link_to(image_tag('580.jpg', :class => "product_thumb", :size => "124x124", :alt => "shoe.name"), "#") %>
-		</li>
-		<li id="">
-			<%= link_to(image_tag('580.jpg', :class => "product_thumb", :size => "124x124", :alt => "shoe.name"), "#") %>
-		</li>
-		<li id="">
-			<%= link_to(image_tag('580.jpg', :class => "product_thumb", :size => "124x124", :alt => "shoe.name"), "#") %>
-		</li>
-		<li id="">
-			<%= link_to(image_tag('580.jpg', :class => "product_thumb", :size => "124x124", :alt => "shoe.name"), "#") %>
-		</li>
-		<li id="">
-			<%= link_to(image_tag('580.jpg', :class => "product_thumb", :size => "124x124", :alt => "shoe.name"), "#") %>
-		</li>
-		<li id="">
-			<%= link_to(image_tag('580.jpg', :class => "product_thumb", :size => "124x124", :alt => "shoe.name"), "#") %>
-		</li>
-		<li id="">
-			<%= link_to(image_tag('580.jpg', :class => "product_thumb", :size => "124x124", :alt => "shoe.name"), "#") %>
-		</li>
-		<li id="">
-			<%= link_to(image_tag('580.jpg', :class => "product_thumb", :size => "124x124", :alt => "shoe.name"), "#") %>
-		</li>
-		<li id="">
-			<%= link_to(image_tag('580.jpg', :class => "product_thumb", :size => "124x124", :alt => "shoe.name"), "#") %>
-		</li>
-		<li id="">
-			<%= link_to(image_tag('580.jpg', :class => "product_thumb", :size => "124x124", :alt => "shoe.name"), "#") %>
-		</li>
-		<li id="">
-			<%= link_to(image_tag('580.jpg', :class => "product_thumb", :size => "124x124", :alt => "shoe.name"), "#") %>
-		</li>
-		<li id="">
-			<%= link_to(image_tag('580.jpg', :class => "product_thumb", :size => "124x124", :alt => "shoe.name"), "#") %>
-		</li>
-		<li id="">
-			<%= link_to(image_tag('580.jpg', :class => "product_thumb", :size => "124x124", :alt => "shoe.name"), "#") %>
-		</li>
-		<li id="">
-			<%= link_to(image_tag('580.jpg', :class => "product_thumb", :size => "124x124", :alt => "shoe.name"), "#") %>
-		</li>
-	</ul><!-- .shoe_catalog -->
+    <ul class="shoe_catalog">
+        <%= render @shoes %>
+    </ul><!-- .shoe_catalog -->
+    <%= paginate @shoes %>
 </section>
