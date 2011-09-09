@@ -48,7 +48,7 @@ class Shoe < ActiveRecord::Base
   has_attached_file :photo_manual_thumb,
                     :storage => :s3,
                     :s3_credentials => "#{Rails.root}/config/s3.yml",
-                    :path => "/shoe/photo_manual_thumb/:style/:id/:filename"
+                    :path => "shoe/photo_manual_thumb/:style/:id/:filename"
 
   private
   # parses string to get season_name and year
