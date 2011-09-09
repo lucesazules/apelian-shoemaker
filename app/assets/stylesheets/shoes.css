@@ -24,6 +24,18 @@
 
 /* shoes trend */
 
-#shoes_trend #inner_content {
+#shoes_trend .shoe_catalog li {
+	overflow:hidden;
+	display:inline-block;
+	width:124px;
+	height:124px;
+	border-width: 1px;
+	border-style: dashed;	
+	border-color: rgb(244, 251, 255); /* Fallback */
+	border-color: rgb(244, 251, 255, 0.6); /* Fallback */
+	margin: 0 11px 11px 0;
+}
 
+#shoes_trend .shoe_catalog li:nth-child(6n) {
+	margin-right:0px;	
 }
