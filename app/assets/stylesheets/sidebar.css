@@ -85,6 +85,11 @@ body #sidebar .logo {
   	background: rgba(25, 25, 25, 0.7);
 }
 
+#pages_contact #sidebar ul li:first-child {
+	background: rgb(201, 0, 74); /* Fallback */
+	background: rgba(201, 0, 74, 0.7);
+}
+
 #pages_form #sidebar ul li {
 	border-color: rgb(244, 251, 255); /* Fallback */
 	background: rgb(25, 25, 25); /* Fallback */

@@ -1,5 +1,4 @@
 /* General Styles */
-
 body hr {
 	margin:0px 0px 0px 0px;
 	border-style: dashed;
@@ -23,7 +22,7 @@ body ul{
 }
 
 #pages_index .full_background {
-		background: url('bg_escalator_green.jpg') no-repeat top left fixed;
+		background: #000 url('bg_escalator_green.jpg') no-repeat top left fixed;
 		-webkit-background-size: cover;
 	    -moz-background-size: cover;
 	    -o-background-size: cover;
@@ -31,7 +30,7 @@ body ul{
 }
 
 #pages_form .full_background {
-		background: url('bg_exit.jpg') no-repeat top left fixed;
+		background: #000 url('bg_exit.jpg') no-repeat top left fixed;
 		-webkit-background-size: cover;
 	    -moz-background-size: cover;
 	    -o-background-size: cover;
@@ -39,7 +38,7 @@ body ul{
 }
 
 #pages_contact .full_background {
-		background: url('bg_exit.jpg') no-repeat top left fixed;
+		background: #000 url('bg_exit.jpg') no-repeat top left fixed;
 		-webkit-background-size: cover;
 	    -moz-background-size: cover;
 	    -o-background-size: cover;
@@ -47,7 +46,7 @@ body ul{
 }
 
 #shoes_index .full_background {
-		background: url('bg_escalator_green.jpg') no-repeat top left fixed;
+		background:#000 url('bg_escalator_green.jpg') no-repeat top left fixed;
 		-webkit-background-size: cover;
 	    -moz-background-size: cover;
 	    -o-background-size: cover;
@@ -55,7 +54,7 @@ body ul{
 }
 
 #shoes_show .full_background {
-		background: url('bg_escalator_green.jpg') no-repeat top left fixed;
+		background: #000 url('bg_escalator_green.jpg') no-repeat top left fixed;
 		-webkit-background-size: cover;
 	    -moz-background-size: cover;
 	    -o-background-size: cover;
@@ -63,7 +62,7 @@ body ul{
 }
 
 #shoes_trend .full_background {
-		background: url('bg_city.jpg') no-repeat top left fixed;
+		background: #000 url('bg_city.jpg') no-repeat top left fixed;
 		-webkit-background-size: cover;
 	    -moz-background-size: cover;
 	    -o-background-size: cover;
@@ -104,6 +103,14 @@ header {
 	position:relative;
 	width:917px;
 	height:100%;
+}
+
+#inner_content {
+	overflow:hidden;
+	width:827px;
+	height:415px;
+	margin-top:20px;
+	margin-left:86px;
 }
 
 footer {

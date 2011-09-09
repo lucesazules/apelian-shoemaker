@@ -1,20 +1,41 @@
-#shoes_index #inner_content {
-	width:auto;
-	height:auto;
-	margin:20px;
-	background:white;
+/* shoes index */
+
+#shoes_index .shoe_catalog li {
+	overflow:hidden;
+	display:inline-block;
+	width:124px;
+	height:124px;
+	border-width: 1px;
+	border-style: dashed;	
+	border-color: rgb(244, 251, 255); /* Fallback */
+	border-color: rgba(244, 251, 255, 0.6); /* Fallback */
+	margin: 0 11px 11px 0;
 }
+
+#shoes_index .shoe_catalog li:nth-child(6n) {
+	margin-right:0px;	
+}
+
+/* shoes show */
 
 #shoes_show #inner_content {
-	width:auto;
-	height:auto;
-	margin:20px;
-	background:white;
+
 }
 
-#shoes_trend #inner_content {
-	width:auto;
-	height:auto;
-	margin:20px;
-	background:white;
+/* shoes trend */
+
+#shoes_trend .shoe_catalog li {
+	overflow:hidden;
+	display:inline-block;
+	width:124px;
+	height:124px;
+	border-width: 1px;
+	border-style: dashed;	
+	border-color: rgb(244, 251, 255); /* Fallback */
+	border-color: rgba(244, 251, 255, 0.6); /* Fallback */
+	margin: 0 11px 11px 0;
+}
+
+#shoes_trend .shoe_catalog li:nth-child(6n) {
+	margin-right:0px;	
 }
