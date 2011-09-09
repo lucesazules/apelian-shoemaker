@@ -3,7 +3,7 @@ class Shoe < ActiveRecord::Base
 
 
   has_attached_file :photo,
-                    :styles => { :medium => "300x300>", :thumb => "100x100>" },
+                    :styles => { :medium => "300x300>", :thumb => "124x124>" },
                     :storage => :s3,
                     :s3_credentials => "#{Rails.root}/config/s3.yml",
                     :path => "shoe/photo/:style/:id/:filename"

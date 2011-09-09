@@ -1,6 +1,9 @@
 <section id="inner_content">
     <ul class="shoe_catalog">
-        <%= render @shoes %>
-    </ul><!-- .shoe_catalog -->
+      <%= render @shoes %>
+      <%- (0...(18-@shoes.size)).each do |n| -%>
+          <%= render :partial => 'empty_box' %>
+      <%- end -%>
+    </ul>
     <%= paginate @shoes %>
 </section>
