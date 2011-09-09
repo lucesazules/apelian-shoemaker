@@ -22,6 +22,153 @@
 
 }
 
+#shoes_show #shoe_reel {
+	float:left;
+	width:126px;
+	height:395px;
+	margin-right:11px;
+}
+
+#shoes_show #shoe_reel li {
+	overflow:hidden;
+	width:124px;
+	height:124px;
+	border-width: 1px;
+	border-style: dashed;	
+	border-color: rgb(244, 251, 255); /* Fallback */
+	border-color: rgba(244, 251, 255, 0.6); /* Fallback */
+	margin-bottom:11px;
+}
+
+#shoes_show #shoe_detail {
+	position:relative;
+	float:left;
+	width:688px;
+	height:398px;
+	border-width: 1px;
+	border-style: dashed;	
+	border-color: rgb(244, 251, 255); /* Fallback */
+	border-color: rgba(244, 251, 255, 0.6); /* Fallback */
+}
+
+#shoes_show #shoe_detail ul {
+	overflow:hidden;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size:11px;
+	font-weight: normal;
+	color:rgb(35, 31, 32);
+	background:#FFF;
+	border-width: 1px;
+	border-style: dashed;	
+	border-color: rgb(35, 31, 32); /* Fallback */
+	border-color: rgba(35, 31, 32, 0.6); /* Fallback */
+}
+
+/* catalog page counter */
+
+#shoes_show .catalog_page {
+	position:absolute;
+	top:15px;
+	right:11px;
+	z-index: 10;
+	display:block;
+	width:47px;
+	height:17px;
+	padding-top:7px;
+	padding-left:7px;
+}
+
+/* page navigation */
+#shoes_show #shoe_detail .page_navigation {
+	background:transparent;
+	border-width: 0px;
+}
+
+
+#shoes_show .page_navigation li.right {
+	position:absolute;
+	top:190px;
+	right:14px;
+	z-index: 10;
+	display:block;
+	width:15px;
+	height:20px;
+	background:url('icon_arrow_black_right.png');
+}
+
+#shoes_show .page_navigation li.left {
+	position:absolute;
+	top:190px;
+	left:14px;
+	z-index: 10;
+	display:block;
+	width:15px;
+	height:20px;
+	background-image: url('icon_arrow_black_left.png');
+}
+
+/* zoom navigation */
+
+#shoes_show #shoe_detail .zoom_navigation {
+	position:absolute;
+	top:250px;
+	right:11px;
+	z-index: 10;
+	background: transparent;
+	border-width: 0px;
+}
+
+#shoes_show .zoom_navigation li {
+	position:relative;
+	display:inline-block;
+	width:27px;
+	height:27px;
+}
+
+#shoes_show .zoom_navigation li:first-child {
+	background-image: url('icon_plus_black.png');
+	margin-right:5px;
+}
+
+#shoes_show .zoom_navigation li:last-child {
+	background-image: url('icon_minus_black.png');
+}
+
+/* shoe data */
+
+#shoes_show .shoe_data {
+	position:absolute;
+	bottom:15px;
+	right:11px;
+	z-index: 10;
+	display:block;
+	width:218px;
+	height:84px;
+}
+
+#shoes_show .shoe_data li {
+	position:relative;
+	overflow:hidden;
+	display:block;
+	width:auto;
+	height:16px;
+	border-bottom: rgb(35, 31, 32) 1px solid;
+	padding-top:8px;
+	padding-left:10px;
+	font-weight: bold;
+}
+
+#shoes_show .shoe_data li span {
+	font-weight: normal;
+}
+
+#shoes_show .shoe_data li:last-child {
+	border-bottom:none;
+	height:26px;
+}
+
+
+
 /* shoes trend */
 
 #shoes_trend .shoe_catalog li {

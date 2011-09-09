@@ -1,5 +1,28 @@
 <section id="inner_content">
-	<h1>Shoes#show</h1>
-	<p>Find me in app/views/shoes/show.html.erb</p>
+	<ul id="shoe_reel">
+		<li><%= link_to(image_tag('', :size => "124x124", :alt => "shoe.id"), "#") %></li>
+		<li class="current"><%= link_to(image_tag('580.jpg', :size => "124x124", :alt => "shoe.id"), "#") %></li>
+		<li><%= link_to(image_tag('', :size => "124x124", :alt => "shoe.id"), "#") %></li>
+	</ul>
+	<div id="shoe_detail">
+		<div id="shoe_photo">
+			<%= image_tag('580g.jpg', :size => "688x398", :alt => "shoe.id") %>
+		</div><!-- .shoe_photo -->
+		<ul class="catalog_page">
+			<li>99/99</li>
+		</ul><!-- .catalog_page -->
+		<ul class="page_navigation">
+			<li class="right">&nbsp;</li>
+			<li class="left">&nbsp;</li>
+		</ul><!-- .page_navigation -->
+		<ul class="zoom_navigation">
+			<li>&nbsp;</li>
+			<li>&nbsp;</li>
+		</ul><!-- .zoom_navigation -->	
+		<ul class="shoe_data">
+			<li>Articulo: <span>content</span></li>
+			<li>Talles: <span>content</span></li>
+			<li>Color: <span>content</span></li>
+		</ul><!-- .shoe_data -->
+	</div><!-- .shoe_detail -->
 </section>
-

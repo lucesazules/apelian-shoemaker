@@ -29,12 +29,16 @@ ActiveAdmin.register Shoe do
       end
     end
 
-    panel "image" do
+    panel "Photo" do
       ul do
         li image_tag shoe.photo.url
         li image_tag shoe.photo.url(:medium)
         li image_tag shoe.photo.url(:thumb)
       end
+    end
+
+    panel "Manual Thumb for photo" do
+      ul li image_tag shoe.photo_manual_thumb.url
     end
   end
 
@@ -52,6 +56,7 @@ ActiveAdmin.register Shoe do
     end
     f.inputs do
       f.input :photo
+      f.input :photo_manual_thumb
     end
     f.buttons
   end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110827170452) do
+ActiveRecord::Schema.define(:version => 20110909145737) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.integer  "resource_id",   :null => false
@@ -63,12 +63,16 @@ ActiveRecord::Schema.define(:version => 20110827170452) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "heel"
-    t.string   "year"
     t.string   "season_name"
     t.string   "photo_file_name"
     t.string   "photo_content_type"
     t.integer  "photo_file_size"
     t.datetime "photo_updated_at"
+    t.string   "photo_manual_thumb_file_name"
+    t.string   "photo_manual_thumb_content_type"
+    t.integer  "photo_manual_thumb_file_size"
+    t.datetime "photo_manual_thumb_updated_at"
+    t.integer  "year"
   end
 
   create_table "shoes_sizes", :force => true do |t|

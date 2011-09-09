@@ -6,4 +6,3 @@ tmp/
 .idea/
 .rvmrc
 public/system/
-Gemfile.lock
