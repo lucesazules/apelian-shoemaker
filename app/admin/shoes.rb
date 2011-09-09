@@ -44,7 +44,7 @@ ActiveAdmin.register Shoe do
       f.input :name
     end
     f.inputs do
-      f.input :year, :as => :select, :collection => 1900..2100, :include_blank => false
+      f.input :year, :as => :select, :collection => 2010..2100, :include_blank => false
       f.input :season_name, :as => :select, :collection => Shoe::SEASON_NAMES, :include_blank => false
       f.input :heel, :as => :select, :collection => Shoe::HEELS, :include_blank => false
       f.input :colors, :as => :check_boxes
