@@ -50,9 +50,9 @@
 	font-size:11px;
 }
 
-/* pages#form */
+/* orders#new */
 
-#pages_form #inner_content {
+#orders_new #inner_content {
 	width:742px;
 	height:355px;
 	margin-left:86px;
@@ -64,23 +64,33 @@
 	background: #FFF;
 }
 
-#pages_form #inner_content .form_header img {
+#orders_new #inner_content .form_header {
+	display:block;
+	width:auto;
+	height:70px;
+	border-bottom:1px;
+	border-style: dashed;
+	border-color:#C4C4C4;
+}
+
+
+#orders_new #inner_content .form_header img {
 	float: left;
 	margin-right:39px;
 }
 
-#pages_form #inner_content .form_header ul {
+#orders_new #inner_content .form_header ul {
 	float: left;
 	font-size:9.7px;
 	color:#000;
 	margin-right:110px;
 }
 
-#pages_form #inner_content .form_header ul li span {
+#orders_new #inner_content .form_header ul li span {
 	font-weight: normal;
 }
 
-#pages_form #inner_content .form_header p {
+#orders_new #inner_content .form_header p {
 	float: left;
 	clear:right;
 	display:block;
@@ -88,13 +98,20 @@
 	color:#000;
 }
 
-body #pages_form #inner_content .form_page hr {
+#orders_new #inner_content .form_content {
+	float: none;
 	clear:both;
-	margin:0px 0px 0px 0px;
-	border-style: dashed;
-	border-color:#FFF;
 }
 
-#pages_form #inner_content .form_content {
-	clear:both;
+#orders_new #inner_content .form_content h4 {
+	margin-top:12px;
+	font-size: 12px;
+	color:#000;
 }
+
+#orders_new #inner_content .form_content form {
+	margin-top:12px;
+	font-size: 12px;
+	color:#000;
+}
+
