@@ -1,3 +1,13 @@
+<%-
+
+if params[:action] == :trend
+    link = shoe_path(:id => shoe.id, :scope => :trend)
+else
+    link = shoe
+end
+
+-%>
+
 <%= content_tag_for(:li, shoe) do %>
-    <%= link_to(image_tag(shoe.photo_manual_thumb.url, :class => :product_thumb, :size => "124x124", :alt => shoe.name), shoe) %>
+  <%= link_to(image_tag(shoe.photo_manual_thumb.url, :class => :product_thumb, :size => "124x124", :alt => shoe.name), link) %>
 <%- end -%>

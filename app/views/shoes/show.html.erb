@@ -1,28 +1,28 @@
 <section id="inner_content">
 	<ul id="shoe_reel">
-		<li><%= link_to(image_tag('', :size => "124x124", :alt => "shoe.id"), "#") %></li>
-		<li class="current"><%= link_to(image_tag('580.jpg', :size => "124x124", :alt => "shoe.id"), "#") %></li>
-		<li><%= link_to(image_tag('', :size => "124x124", :alt => "shoe.id"), "#") %></li>
+		<li><%= link_to(image_tag(@previous_shoe.photo_manual_thumb.url, :size => "124x124", :alt => @previous_shoe.name), shoe_path(:id => @previous_shoe.id, :scope => params[:scope])) unless @previous_shoe.nil? %></li>
+		<li class="current"><%= link_to(image_tag(@shoe.photo_manual_thumb.url, :size => "124x124", :alt => @shoe.name), "#") %></li>
+		<li><%= link_to(image_tag(@next_shoe.photo_manual_thumb.url, :size => "124x124", :alt => @next_shoe.name), shoe_path(:id => @next_shoe.id, :scope => params[:scope])) unless @next_shoe.nil? %></li>
 	</ul>
 	<div id="shoe_detail">
 		<div id="shoe_photo">
-			<%= image_tag('580g.jpg', :size => "688x398", :alt => "shoe.id") %>
+			<%= image_tag(@shoe.photo.url, :size => "688x398", :alt => @shoe.name) %>
 		</div><!-- .shoe_photo -->
 		<ul class="catalog_page">
-			<li>99/99</li>
+			<li><%= @index %>/<%= @total_shoes %></li>
 		</ul><!-- .catalog_page -->
 		<ul class="page_navigation">
-			<li class="right">&nbsp;</li>
-			<li class="left">&nbsp;</li>
+			<li class="right"><%= link_to(image_tag('icon_arrow_black_right.png'), shoe_path(:id => @next_shoe.id, :scope => params[:scope])) unless @next_shoe.nil? %></li>
+			<li class="left"><%= link_to(image_tag('icon_arrow_black_left.png'), shoe_path(:id => @previous_shoe.id, :scope => params[:scope])) unless @previous_shoe.nil? %></li>
 		</ul><!-- .page_navigation -->
 		<ul class="zoom_navigation">
 			<li>&nbsp;</li>
 			<li>&nbsp;</li>
 		</ul><!-- .zoom_navigation -->	
 		<ul class="shoe_data">
-			<li>Articulo: <span>content</span></li>
-			<li>Talles: <span>content</span></li>
-			<li>Color: <span>content</span></li>
+			<li>Articulo: <span><%= @shoe.article_number %></span></li>
+			<li>Talles: <span><%= @shoe.sizes.map{|s|s.number}.join(',') %></span></li>
+			<li>Color: <span><%= @shoe.colors.map{|c|c.name}.join(',') %></span></li>
 		</ul><!-- .shoe_data -->
 	</div><!-- .shoe_detail -->
 </section>

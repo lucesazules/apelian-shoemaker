@@ -20,7 +20,25 @@ class Shoe < ActiveRecord::Base
   validates_inclusion_of :season_name, :in => SEASON_NAMES
   validates_numericality_of :year, :greater_than_or_equal_to => 1900, :less_than_or_equal_to => 2100
 
+  scope :previous_campaigns, where(true)
+  scope :current_campaign, where(true)
   scope :trend, where("year > #{Time.zone.now.year}")
+
+  # Returns next shoe
+  # @param [Symbol] order_criteria. Defaults to :name
+  # @param [] scope
+  # @return [Shoe] next shoe
+  def next_shoe(order_criteria = :name, scope = Shoe)
+    scope.order(order_criteria).where("#{order_criteria} > ?", self.send(order_criteria)).first
+  end
+
+  # Returns previous shoe
+  # @param [Symbol] order_criteria. Defaults to :name
+  # @param [] scope
+  # @return [Shoe] next shoe
+  def previous_shoe(order_criteria = :name, scope = Shoe)
+    scope.order(order_criteria).where("#{order_criteria} < ?", self.send(order_criteria)).first
+  end
 
   # @return [String] campaign name
   def campaign
