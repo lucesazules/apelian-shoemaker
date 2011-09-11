@@ -1,5 +1,14 @@
 ActiveAdmin.register Shoe do
 
+  index do
+    column :article_number
+    column :heel
+    column :season_name
+    column :year
+    column :trend
+    default_actions
+  end
+
   show :title => :name do
     h2 shoe.campaign
     panel I18n.t('admin.shoes.show.characteristics') do
