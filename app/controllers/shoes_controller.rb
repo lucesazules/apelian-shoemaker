@@ -10,7 +10,8 @@ class ShoesController < ApplicationController
     if params[:scope].to_s == 'trend'
       scope = Shoe.trend
     else
-      scope = Shoe.where(:heel => @shoe.heel)
+      @search = Shoe.search(:heel_equals => @shoe.heel)
+      scope = @search
     end
     @previous_shoe = @shoe.previous_shoe(:name, scope)
     @next_shoe = @shoe.next_shoe(:name, scope)
