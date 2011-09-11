@@ -39,4 +39,10 @@ module ApplicationHelper
     heel==current_heel
   end
 
+  # Indicates if we are navigating through
+  # trend shoes
+  def navigating_trend?
+    body_id == 'shoes_trend'
+  end
+
 end
