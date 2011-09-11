@@ -1,4 +1,35 @@
 <section id="inner_content">
-	<h1>Pages#Form</h1>
-	<p>Find me in app/views/pages/form.html.erb</p>
+	<div class="form_page">
+		<section class="form_header">
+			<%= image_tag('logo_apelian_w80px_black.png', :class => "logo", :size => "78x46", :alt => "Apelian Shoe-Maker") %>
+			<ul class="contact_data">
+				<li>APELIAN <span>SHOE-MAKER /</span></li>
+				<li>ADOLFO ALSINA 4082</li>
+				<li>VILLA MARTELLI CP B1603ANR</li>
+				<li>PCIA. DE BS. AS., ARGENTINA.</li>
+				<li>TEL: 15-5005-3360</li>
+			</ul><!-- .contact_data -->
+			<p> 
+				Este canal está orientado a revendedores, distribuidores que estén <br/> 
+				interesados en comercializar nuestros productos. <br/>
+				En cuáles de nuestros productos estaría interesado? Por favor, especifique <br/>
+				artículo, color, talle y cantidad. Le responderemos a la brevedad.
+			</p>
+		</section><!-- .form_header -->	
+		<hr/>
+		<section class="form_content">
+			<h4>INGRESE SUS DATOS PARA INICIAR EL CONTACTO</h4>
+			<form action="form_submit" method="get" accept-charset="utf-8">
+
+
+				<p><input type="submit" value="Continue &rarr;"></p>
+			</form>			
+		</section><!-- .form_content -->
+		
+		<section class="form_navigation">
+		
+		</section><!-- .form_navigation -->
+
+	</div><!-- .page_1 -->
+
 </section>
