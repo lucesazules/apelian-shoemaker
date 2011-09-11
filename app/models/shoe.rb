@@ -37,7 +37,7 @@ class Shoe < ActiveRecord::Base
   # @param [] scope
   # @return [Shoe] next shoe
   def previous_shoe(order_criteria = :name, scope = Shoe)
-    scope.order(order_criteria).where("#{order_criteria} < ?", self.send(order_criteria)).first
+    scope.order(order_criteria).where("#{order_criteria} < ?", self.send(order_criteria)).last
   end
 
   # @return [String] campaign name
