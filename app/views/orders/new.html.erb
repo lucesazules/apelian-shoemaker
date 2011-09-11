@@ -18,15 +18,31 @@
 		</section><!-- .form_header -->	
 		<section class="form_content">
 			<h4>INGRESE SUS DATOS PARA INICIAR EL CONTACTO</h4>
-			<form action="form_submit" method="get" accept-charset="utf-8">
-
-
-				<p><input type="submit" value="Continue &rarr;"></p>
-			</form>			
+          <%= semantic_form_for @order do |f| %>
+              <%= f.inputs do %>
+                  <%= f.input :razon_social %>
+                  <%= f.input :cuit %>
+                  <%= f.input :nombre %>
+                  <%= f.input :apellido %>
+                  <%= f.input :email %>
+                  <%= f.input :email_confirm %>
+                  <%= f.input :telefono %>
+                  <%= f.input :celular %>
+                  <%= f.input :calle %>
+                  <%= f.input :nro %>
+                  <%= f.input :piso %>
+                  <%= f.input :depto %>
+                  <%= f.input :provincia %>
+                  <%= f.input :localidad %>
+                  <%= f.input :codigo_postal %>
+              <%- end -%>
+              <%= f.buttons do %>
+                  <%= f.commit_button "Continue  &rarr;" %>
+              <%- end -%>
+          <%- end -%>
 		</section><!-- .form_content -->
 		
 		<section class="form_navigation">
-		
 		</section><!-- .form_navigation -->
 
 	</div><!-- .page_1 -->
