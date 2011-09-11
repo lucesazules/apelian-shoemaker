@@ -6,7 +6,8 @@ ApelianShoemaker::Application.routes.draw do
     end
   end
 
-  match "form" => "pages#form", :as => :request_form
+  resources :orders
+
   match "contact" => "pages#contact", :as => :contact
 
   ActiveAdmin.routes(self)
