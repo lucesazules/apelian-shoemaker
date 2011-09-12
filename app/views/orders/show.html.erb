@@ -1,0 +1,34 @@
+<p>
+  <%= link_to_function("Print this Page", "javascript:print()") %>
+</p>
+<p>
+  Razon Social: <%= @order.razon_social %><br>
+  CUIT: <%= @order.cuit %><br>
+  Nombre: <%= @order.nombre %> <%= @order.apellido %><br>
+  Email: <%= @order.email %><br>
+  Tel: <%= @order.telefono %><br>
+  Cel: <%= @order.celular %><br>
+  Direccion: <%= @order.calle %> <%= @order.nro %> <%= @order.piso %> <%= @order.depto %><br>
+  Provincia: <%= @order.provincia %><br>
+  Localidad: <%= @order.localidad %><br>
+  CP: <%= @order.codigo_postal %><br>
+</p>
+
+<p>
+    <table>
+      <tr>
+        <th>Nro Art</th>
+        <th>Color</th>
+        <th>Talle</th>
+        <th>Cantidad</th>
+      </tr>
+      <% @order.order_details.each do |od| %>
+          <tr>
+            <td><%= od.shoe.article_number %></td>
+            <td><%= od.color.name %></td>
+            <td><%= od.size.number %></td>
+            <td><%= od.quantity %></td>
+          </tr>
+      <%- end -%>
+    </table>
+</p>
