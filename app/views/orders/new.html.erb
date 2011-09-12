@@ -40,10 +40,7 @@
 							</ul>
 						</li><!-- #formpart_02 -->
 					</ul>
-				</li><!-- #form_pannel_01 -->
-			
-				<li id="form_pannel_02">
- 					<ul id="formpart_03">
+					<ul id="formpart_03">
  					  <%= f.input :calle %>
                 	  <%= f.input :nro %>
                 	  <%= f.input :piso %>
@@ -54,10 +51,13 @@
                 	  <%= f.input :localidad %>
                 	  <%= f.input :codigo_postal %>					
 					</ul><!-- #formpart_04 -->
-				</li><!-- #form_pannel_02 -->
+				</li><!-- #form_pannel_01 -->
               <%- end -%>
               <%= f.buttons do %>
-                  <%= f.commit_button "Continue  &rarr;" %>
+				<li><a href="">Continuar</a></li>
+				<li><a href="">Imrpimir</a></li>
+				<li><a href="">Enviar</a></li>
+                <%= f.commit_button "Continue  &rarr;" %>
               <%- end -%>
           <%- end -%>
 		</section><!-- .form_content -->
