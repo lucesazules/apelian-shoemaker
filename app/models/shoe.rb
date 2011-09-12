@@ -22,14 +22,6 @@ class Shoe < ActiveRecord::Base
 
   scope :trend, where( :trend => true )
 
-  def self.previous_campaigns
-    # TODO
-  end
-
-  def self.current_campaign
-    # TODO
-  end
-
   # Returns next shoe
   # @param [Symbol] order_criteria. Defaults to :name
   # @param [] scope
