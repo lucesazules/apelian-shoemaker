@@ -14,10 +14,10 @@ class ShoesController < ApplicationController
       @search = Shoe.search(:heel_equals => @shoe.heel)
       scope = @search
     end
-    @previous_shoe = @shoe.previous_shoe(:name, scope)
-    @next_shoe = @shoe.next_shoe(:name, scope)
+    @previous_shoe = @shoe.previous_shoe(:article_number, scope)
+    @next_shoe = @shoe.next_shoe(:article_number, scope)
     @total_shoes = scope.count
-    @index = scope.where("name < ?", @shoe.name).count+1
+    @index = scope.where("article_number < ?", @shoe.article_number).count+1
   end
 
   def trend

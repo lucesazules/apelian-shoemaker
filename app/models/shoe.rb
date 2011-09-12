@@ -23,18 +23,18 @@ class Shoe < ActiveRecord::Base
   scope :trend, where( :trend => true )
 
   # Returns next shoe
-  # @param [Symbol] order_criteria. Defaults to :name
+  # @param [Symbol] order_criteria. Defaults to :article_number
   # @param [] scope
   # @return [Shoe] next shoe
-  def next_shoe(order_criteria = :name, scope = Shoe)
+  def next_shoe(order_criteria = :article_number, scope = Shoe)
     scope.order(order_criteria).where("#{order_criteria} > ?", self.send(order_criteria)).first
   end
 
   # Returns previous shoe
-  # @param [Symbol] order_criteria. Defaults to :name
+  # @param [Symbol] order_criteria. Defaults to :article_number
   # @param [] scope
   # @return [Shoe] next shoe
-  def previous_shoe(order_criteria = :name, scope = Shoe)
+  def previous_shoe(order_criteria = :article_number, scope = Shoe)
     scope.order(order_criteria).where("#{order_criteria} < ?", self.send(order_criteria)).last
   end
 
