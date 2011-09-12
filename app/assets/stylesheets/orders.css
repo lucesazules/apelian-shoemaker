@@ -63,29 +63,37 @@
 	color:#000;
 }
 
+#orders_new #new_order #form_pannel_01, #orders_new #new_order #form_pannel_02 {
+	padding:0px;
+}
 
-#orders_new #new_order #formpart_01 {
+#orders_new #new_order #formpart_01, #orders_new #new_order #formpart_02, #orders_new #new_order #formpart_03, #orders_new #new_order #formpart_04  {
 	overflow:hidden;
 	display:inline-block;
-	width:372px;
+	width:360px;
 	height:96px;
 	border: 1px solid #999;
 	
 }
 
-#orders_new #new_order #formpart_01 li {
+#orders_new #new_order #formpart_01 li, #orders_new #new_order #formpart_02 li, #orders_new #new_order #formpart_03 li, #orders_new #new_order #formpart_04 li {
 	position:relative;
 }
 
-#orders_new #new_order #formpart_01 li label {
+#orders_new #new_order #formpart_01 li label, #orders_new #new_order #formpart_02 li label, #orders_new #new_order #formpart_03 li label, #orders_new #new_order #formpart_04 li label {
 	display:inline-block;
 	margin-top:6px;
-	
+	font-weight: normal;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 9px;
+	color:#000;
 }
 
-#orders_new #new_order #formpart_01 li input {
+#orders_new #new_order #formpart_01 li input, #orders_new #new_order #formpart_02 li input, #orders_new #new_order #formpart_03 li input, #orders_new #new_order #formpart_04 li input {
 	height:12px;
-	width:260px;
+	width:250px;
 	padding-top:4px;
 	padding-bottom:4px;
 }
+
+
