@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110912001702) do
+ActiveRecord::Schema.define(:version => 20110912043517) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.integer  "resource_id",   :null => false
@@ -105,6 +105,9 @@ ActiveRecord::Schema.define(:version => 20110912001702) do
     t.integer  "year"
     t.boolean  "trend"
   end
+
+  add_index "shoes", ["id"], :name => "index_shoes_on_id"
+  add_index "shoes", ["name"], :name => "index_shoes_on_name"
 
   create_table "shoes_sizes", :force => true do |t|
     t.integer "shoe_id"

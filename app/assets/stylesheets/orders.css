@@ -1,61 +1,99 @@
 /* orders#new */
 
-#orders_new #inner_content {
-	width:742px;
+#inner_content .form_page {
+	width:800px;
 	height:355px; 
 	margin-left:86px;
 	padding: 30px 42px 18px 42px;
 	background: #fff;
 	border-width: 1px;
-	border-style: dashed;
-	border-color: rgb(244, 251, 255); /* Fallback */
+	border-style: dashed; 
+	border-color: rgb(244, 251, 255);
 	background: #FFF;
 }
 
-#orders_new #inner_content .form_header {
+#inner_content .form_header {
 	display:block;
-	width:auto;
+	width:742;
 	height:70px;
-	border-bottom:1px;
-	border-style: dashed;
-	border-color:#C4C4C4;
+	margin-top: 15px;
 }
 
-
-#orders_new #inner_content .form_header img {
+#inner_content .form_header img {
 	float: left;
 	margin-right:39px;
 }
 
-#orders_new #inner_content .form_header ul {
+#inner_content .form_header ul {
+	list-style:none outside none;
+	font-family: Helvetica, Arial, sans-serif;
+	font-weight: bold;
 	float: left;
+	line-height:9.7px;
 	font-size:9.7px;
 	color:#000;
 	margin-right:110px;
 }
 
-#orders_new #inner_content .form_header ul li span {
+#inner_content .form_header ul li span {
 	font-weight: normal;
 }
 
-#orders_new #inner_content .form_header p {
+#inner_content .form_header p {
 	float: left;
 	clear:right;
 	display:block;
+	line-height:11px;
 	font-size: 11px;
 	color:#000;
 }
 
-#orders_new #inner_content .form_content {
+#inner_content .form_content {
 	float: none;
 	clear:both;
+	border-top: 1px dashed #C4C4C4;
 }
 
-#orders_new #inner_content .form_content h4 {
+#inner_content .form_content h4 {
 	margin-top:12px;
 	font-size: 12px;
 	color:#000;
 }
+
+#new_order #formpart_01 li, #new_order #formpart_02 li,  #new_order #formpart_03 li, #new_order #formpart_04 li {
+	margin:8px 0px;
+}
+
+#new_order #formpart_01 li label, #new_order #formpart_02 li label, #new_order #formpart_03 li label, #new_order #formpart_04 li label {
+	margin-top:6px;
+}
+
+/* orders#show */
+
+#mufasa_00 {
+	padding:15px;
+	width:785px;
+}
+
+#mufasa_01 {
+	display:block;
+	width:110px;
+	height:30px;
+	margin-top:15px;
+	border: 1px dashed #C4C4C4;
+}
+
+#mufasa_01 a {
+	display:block;
+	padding:6px;
+	width:100%;
+	height:100%;
+	text-decoration:none;
+	color:#000;
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+/*
 
 #orders_new #inner_content .form_content form {
 	margin-top:12px;
@@ -96,4 +134,5 @@
 	padding-bottom:4px;
 }
 
+*/
 
