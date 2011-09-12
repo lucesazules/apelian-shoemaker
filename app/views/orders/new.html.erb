@@ -53,6 +53,12 @@
 					</ul><!-- #formpart_04 -->
 				</li><!-- #form_pannel_01 -->
               <%- end -%>
+              <%= f.inputs :for => :order_details do |od| %>
+                  <%= od.input :shoe %>
+                  <%= od.input :size, :collection => Size.all.map{|s|[s.number,s.id]} %>
+                  <%= od.input :color, :collection => Color.all.map{|c|[c.name,c.id]} %>
+                  <%= od.input :quantity %>
+              <%- end -%>
               <%= f.buttons do %>
 				<li><a href="">Continuar</a></li>
 				<li><a href="">Imrpimir</a></li>

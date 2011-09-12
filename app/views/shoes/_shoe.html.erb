@@ -1,6 +1,6 @@
 <%-
 
-if params[:action] == :trend
+if params[:action].to_sym == :trend
     link = shoe_path(:id => shoe.id, :scope => :trend)
 else
     link = shoe

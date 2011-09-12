@@ -1,5 +1,16 @@
 require 'factory_girl'
 
+Factory.define :order_detail do |f|
+  f.association :shoe
+  f.association :color
+  f.association :size
+  f.association :order
+end
+
+Factory.define :order do |f|
+  f.association :order_details
+end
+
 Factory.define :shoe do |f|
   f.sequence(:name) { |n| "shoe#{n}"}
   f.sequence(:article_number) { |n| n }
