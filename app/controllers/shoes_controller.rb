@@ -1,5 +1,6 @@
 class ShoesController < ApplicationController
 
+  before_filter :get_shoe, :only => :show
   before_filter :set_scope, :only => :show
 
   def index
@@ -8,7 +9,6 @@ class ShoesController < ApplicationController
   end
 
   def show
-    @shoe = Shoe.find(params[:id], :include => [:colors, :sizes])
     @previous_shoe = @shoe.previous_shoe(:article_number, @scope)
     @next_shoe = @shoe.next_shoe(:article_number, @scope)
     @total_shoes = @scope.count
@@ -17,6 +17,11 @@ class ShoesController < ApplicationController
 
   def trend
     @shoes = Shoe.trend.page(params[:page]).per(18)
+  end
+
+  private
+  def get_shoe
+    @shoe = Shoe.find(params[:id], :include => [:colors, :sizes])
   end
 
   private
