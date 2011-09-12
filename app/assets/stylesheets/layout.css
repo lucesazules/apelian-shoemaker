@@ -102,13 +102,13 @@ header {
 	display:block;
 	position:relative;
 	width:917px;
-	height:100%;
+	height:100%; 
 }
 
 #inner_content {
 	overflow:hidden;
 	width:827px;
-	height:405px;
+	height:405px; 
 	margin-top:20px;
 	margin-left:86px;
 }

@@ -1,0 +1,91 @@
+/* orders#new */
+
+#orders_new #inner_content {
+	width:742px;
+	height:355px; 
+	margin-left:86px;
+	padding: 30px 42px 18px 42px;
+	background: #fff;
+	border-width: 1px;
+	border-style: dashed;
+	border-color: rgb(244, 251, 255); /* Fallback */
+	background: #FFF;
+}
+
+#orders_new #inner_content .form_header {
+	display:block;
+	width:auto;
+	height:70px;
+	border-bottom:1px;
+	border-style: dashed;
+	border-color:#C4C4C4;
+}
+
+
+#orders_new #inner_content .form_header img {
+	float: left;
+	margin-right:39px;
+}
+
+#orders_new #inner_content .form_header ul {
+	float: left;
+	font-size:9.7px;
+	color:#000;
+	margin-right:110px;
+}
+
+#orders_new #inner_content .form_header ul li span {
+	font-weight: normal;
+}
+
+#orders_new #inner_content .form_header p {
+	float: left;
+	clear:right;
+	display:block;
+	font-size: 11px;
+	color:#000;
+}
+
+#orders_new #inner_content .form_content {
+	float: none;
+	clear:both;
+}
+
+#orders_new #inner_content .form_content h4 {
+	margin-top:12px;
+	font-size: 12px;
+	color:#000;
+}
+
+#orders_new #inner_content .form_content form {
+	margin-top:12px;
+	font-size: 12px;
+	color:#000;
+}
+
+
+#orders_new #new_order #formpart_01 {
+	overflow:hidden;
+	display:inline-block;
+	width:372px;
+	height:96px;
+	border: 1px solid #999;
+	
+}
+
+#orders_new #new_order #formpart_01 li {
+	position:relative;
+}
+
+#orders_new #new_order #formpart_01 li label {
+	display:inline-block;
+	margin-top:6px;
+	
+}
+
+#orders_new #new_order #formpart_01 li input {
+	height:12px;
+	width:260px;
+	padding-top:4px;
+	padding-bottom:4px;
+}

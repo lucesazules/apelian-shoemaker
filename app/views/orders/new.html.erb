@@ -20,31 +20,47 @@
 			<h4>INGRESE SUS DATOS PARA INICIAR EL CONTACTO</h4>
           <%= semantic_form_for @order do |f| %>
               <%= f.inputs do %>
-                  <%= f.input :razon_social %>
-                  <%= f.input :cuit %>
-                  <%= f.input :nombre %>
-                  <%= f.input :apellido %>
-                  <%= f.input :email %>
-                  <%= f.input :email_confirm %>
-                  <%= f.input :telefono %>
-                  <%= f.input :celular %>
-                  <%= f.input :calle %>
-                  <%= f.input :nro %>
-                  <%= f.input :piso %>
-                  <%= f.input :depto %>
-                  <%= f.input :provincia %>
-                  <%= f.input :localidad %>
-                  <%= f.input :codigo_postal %>
+				<li id="form_pannel_01">
+					<ul>
+						<li id="formpart_01">
+							<ul>
+								<%= f.input :razon_social %>
+            	    			<%= f.input :cuit %>
+            	    			<%= f.input :nombre %>
+            	    			<%= f.input :apellido %>
+							</ul>
+						</li><!-- #formpart_01 -->
+						<li id="formpart_02">
+							<ul>
+								<%= f.input :email %>
+            	    			<%= f.input :email_confirm %>
+            	    			<%= f.input :telefono %>
+            	    			<%= f.input :celular %>
+							</ul>
+						</li><!-- #formpart_02 -->
+					</ul>
+				</li><!-- #form_pannel_01 -->
+			
+				<li id="form_pannel_02">
+ 					<ul id="formpart_03">
+ 					  <%= f.input :calle %>
+                	  <%= f.input :nro %>
+                	  <%= f.input :piso %>
+                	  <%= f.input :depto %>	
+ 					</ul><!-- #formpart_03 -->
+				</li>
+				<li>
+					<ul id="formpart_04">
+                	  <%= f.input :provincia %>
+                	  <%= f.input :localidad %>
+                	  <%= f.input :codigo_postal %>					
+					</ul><!-- #formpart_04 -->
+				</li><!-- #form_pannel_02 -->
               <%- end -%>
               <%= f.buttons do %>
                   <%= f.commit_button "Continue  &rarr;" %>
               <%- end -%>
           <%- end -%>
 		</section><!-- .form_content -->
-		
-		<section class="form_navigation">
-		</section><!-- .form_navigation -->
-
 	</div><!-- .page_1 -->
-
 </section>
