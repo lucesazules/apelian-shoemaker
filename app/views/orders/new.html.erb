@@ -61,10 +61,8 @@
                   <%= od.input :quantity, :label => "Pares" %>
               <%- end -%>
               <%= f.buttons do %>
-				<li><a href="">Continuar</a></li>
-				<li><a href="">Imrpimir</a></li>
-				<li><a href="">Enviar</a></li>
-                <%= f.commit_button "Continue  &rarr;" %>
+				<li><a href="">Imprimir</a></li>
+                <%= f.commit_button "Enviar  &rarr;".html_safe %>
               <%- end -%>
           <%- end -%>
 		</section><!-- .form_content -->
