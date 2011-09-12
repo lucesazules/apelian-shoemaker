@@ -1,7 +1,7 @@
 class Order < ActiveRecord::Base
 
   has_many :order_details, :class_name => "OrderDetail"
-  accepts_nested_attributes_for :order_details
+  accepts_nested_attributes_for :order_details, :reject_if => lambda { |attributes| attributes['quantity'].empty? }
 
   validate :email_confirmation
 

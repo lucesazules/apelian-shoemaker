@@ -1,0 +1,15 @@
+Razon Social: <%= @order.razon_social %>
+CUIT: <%= @order.cuit %>
+Nombre: <%= @order.nombre %> <%= @order.apellido %>
+Email: <%= @order.email %>
+Tel: <%= @order.telefono %>
+Cel: <%= @order.celular %>
+Direccion: <%= @order.calle %> <%= @order.nro %> <%= @order.piso %> <%= @order.depto %>
+Provincia: <%= @order.provincia %>
+Localidad: <%= @order.localidad %>
+CP: <%= @order.codigo_postal %>
+
+Cantidad - Nro Art - Color - Talle
+<% @order.order_details.each do |od| %>
+    <%= od.quantity %> - <%= od.shoe.article_number %> - <%= od.color.name %> - <%= od.size.number %>
+<%- end -%>

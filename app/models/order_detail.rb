@@ -5,5 +5,5 @@ class OrderDetail < ActiveRecord::Base
   belongs_to :size
   belongs_to :color
 
-  validates_presence_of :order, :size, :color, :shoe, :quantity
+  validates_presence_of :size, :color, :shoe, :quantity
 end

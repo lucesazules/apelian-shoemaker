@@ -1,5 +1,6 @@
 <section id="inner_content">
-	<div class="form_page">
+  <%= flash[:success] -%>
+  <div class="form_page">
 		<section class="form_header">
 			<%= image_tag('logo_apelian_w80px_black.png', :class => "logo", :size => "78x46", :alt => "Apelian Shoe-Maker") %>
 			<ul class="contact_data">
@@ -54,10 +55,10 @@
 				</li><!-- #form_pannel_01 -->
               <%- end -%>
               <%= f.inputs :for => :order_details do |od| %>
-                  <%= od.input :shoe %>
-                  <%= od.input :size, :collection => Size.all.map{|s|[s.number,s.id]} %>
-                  <%= od.input :color, :collection => Color.all.map{|c|[c.name,c.id]} %>
-                  <%= od.input :quantity %>
+                  <%= od.input :shoe, :label => "Articulo" %>
+                  <%= od.input :size, :collection => Size.all.map{|s|[s.number,s.id]}, :label => "Talle" %>
+                  <%= od.input :color, :collection => Color.all.map{|c|[c.name,c.id]}, :label => "Color" %>
+                  <%= od.input :quantity, :label => "Pares" %>
               <%- end -%>
               <%= f.buttons do %>
 				<li><a href="">Continuar</a></li>
