@@ -42,7 +42,7 @@ module ApplicationHelper
   # Indicates if we are navigating through
   # trend shoes
   def navigating_trend?
-    body_id == 'shoes_trend'
+    (body_id == 'shoes_trend') || (params[:scope].to_s == 'trend')
   end
 
 end
