@@ -7,6 +7,7 @@ class ShoesController < ApplicationController
 
   def show
     @shoe = Shoe.find(params[:id], :include => [:colors, :sizes])
+    scope = nil
     if params[:scope].to_s == 'trend'
       scope = Shoe.trend
     else
