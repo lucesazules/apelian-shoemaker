@@ -1,14 +1,19 @@
 require 'factory_girl'
 
+Factory.define :order do |f|
+  f.association :order_details
+end
+
 Factory.define :order_detail do |f|
   f.association :shoe
   f.association :color
-  f.association :size
   f.association :order
+  f.association :order_details_sizes
 end
 
-Factory.define :order do |f|
-  f.association :order_details
+Factory.define :order_details_sizes do |f|
+  f.association :size
+  f.association :order_detail
 end
 
 Factory.define :shoe do |f|

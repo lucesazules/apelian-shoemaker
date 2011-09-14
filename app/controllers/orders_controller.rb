@@ -13,7 +13,7 @@ class OrdersController < ApplicationController
 
   def create
     @order = Order.new(params[:order])
-    if @order.save!
+    if @order.save
       OrdersMailer.order_form(@order).deliver
       redirect_to @order
     else
