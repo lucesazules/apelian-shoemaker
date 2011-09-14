@@ -4,19 +4,20 @@ class ShoesController < ApplicationController
   before_filter :set_scope, :only => :show
 
   def index
-    @search = Shoe.search(params[:search])
-    @shoes = @search.order(:name).page(params[:page]).per(18)
+    @search = Shoe.order(:article_number).search(params[:search])
+    @shoes = @search.page(params[:page]).per(18)
   end
 
   def show
-    @previous_shoe = @shoe.previous_shoe(:article_number, @scope)
-    @next_shoe = @shoe.next_shoe(:article_number, @scope)
-    @total_shoes = @scope.count
-    @index = @scope.where("article_number < ?", @shoe.article_number).count+1
+    shoes = @scope.order(:article_number).all
+    @total_shoes = shoes.size
+    @index = shoes.index(@shoe)+1
+    @previous_shoe = shoes[@index-2] unless @index-2 < 0
+    @next_shoe = shoes[@index+1] unless @index+1 > @total_shoes
   end
 
   def trend
-    @shoes = Shoe.trend.page(params[:page]).per(18)
+    @shoes = Shoe.trend.order(:article_number).page(params[:page]).per(18)
   end
 
   private
