@@ -83,7 +83,7 @@ describe Shoe do
   end
 
 
-  desribe "previous_shoe" do
+  describe "previous_shoe" do
     pending "test"
   end
 end

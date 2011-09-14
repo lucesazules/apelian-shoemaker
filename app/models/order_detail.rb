@@ -2,8 +2,10 @@ class OrderDetail < ActiveRecord::Base
 
   belongs_to :order
   belongs_to :shoe
-  belongs_to :size
   belongs_to :color
 
-  validates_presence_of :size, :color, :shoe, :quantity
+  has_many :order_details_sizeses, :class_name => "OrderDetailsSizes"
+  has_many :sizes, :through => :order_details_sizeses
+
+  validates_presence_of :color, :shoe, :quantity
 end

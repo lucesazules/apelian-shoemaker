@@ -56,7 +56,7 @@
               <%- end -%>
               <%= f.inputs :for => :order_details do |od| %>
                   <%= od.input :shoe, :label => "Articulo" %>
-                  <%= od.input :size, :collection => Size.all.map{|s|[s.number,s.id]}, :label => "Talle" %>
+                  <%= od.input :sizes, :as => :check_boxes, :collection => Size.all.map{|s|[s.number,s.id]}, :label => "Talle" %>
                   <%= od.input :color, :collection => Color.all.map{|c|[c.name,c.id]}, :label => "Color" %>
                   <%= od.input :quantity, :label => "Pares" %>
               <%- end -%>

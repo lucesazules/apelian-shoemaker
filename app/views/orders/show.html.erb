@@ -28,7 +28,7 @@
 	          <tr>
 	            <td><%= od.shoe.article_number %></td>
 	            <td><%= od.color.name %></td>
-	            <td><%= od.size.number %></td>
+	            <td><%= od.sizes.map{|s|s.number}.join(', ') %></td>
 	            <td><%= od.quantity %></td>
 	          </tr>
 	      <%- end -%>

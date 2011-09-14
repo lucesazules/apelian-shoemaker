@@ -4,9 +4,9 @@ describe OrderDetail do
 
   it { should belong_to :order }
   it { should belong_to :shoe }
+  it { should have_many :sizes }
 
   it { should validate_presence_of :order }
-  it { should validate_presence_of :size }
   it { should validate_presence_of :color }
   it { should validate_presence_of :quantity }
 

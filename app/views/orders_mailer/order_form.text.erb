@@ -11,5 +11,5 @@ CP: <%= @order.codigo_postal %>
 
 Cantidad - Nro Art - Color - Talle
 <% @order.order_details.each do |od| %>
-    <%= od.quantity %> - <%= od.shoe.article_number %> - <%= od.color.name %> - <%= od.size.number %>
+    <%= od.quantity %> - <%= od.shoe.article_number %> - <%= od.color.name %> - <%= od.sizes.map{|s|s.number}.join(', ') %>
 <%- end -%>
