@@ -9,11 +9,12 @@ class ShoesController < ApplicationController
   end
 
   def show
-    shoes = @scope.order(:article_number).all
+    shoes = @scope.all
     @total_shoes = shoes.size
-    @index = shoes.index(@shoe)+1
-    @previous_shoe = shoes[@index-2] unless @index-2 < 0
-    @next_shoe = shoes[@index+1] unless @index+1 > @total_shoes
+    cur_index = shoes.index(@shoe)
+    @index = cur_index+1
+    @previous_shoe = (cur_index-1 < 0)? nil : shoes[cur_index-1]
+    @next_shoe = (cur_index+1 > @total_shoes)? nil : shoes[cur_index+1]
   end
 
   def trend
@@ -25,12 +26,11 @@ class ShoesController < ApplicationController
     @shoe = Shoe.find(params[:id], :include => [:colors, :sizes])
   end
 
-  private
   def set_scope
     if params[:scope].to_s == 'trend'
       @scope = Shoe.trend
     else
-      @search = Shoe.search(:heel_equals => @shoe.heel)
+      @search = Shoe.order(:article_number).search(:heel_equals => @shoe.heel)
       @scope = @search
     end
   end
