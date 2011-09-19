@@ -16,8 +16,8 @@
 			<li class="left"><%= link_to(image_tag('icon_arrow_black_left.png'), shoe_path(:id => @previous_shoe.id, :scope => params[:scope])) unless @previous_shoe.nil? %></li>
 		</ul><!-- .page_navigation -->
 		<ul class="zoom_navigation">
-			<li>&nbsp;</li>
-			<li>&nbsp;</li>
+			<li id="zoom_in">&nbsp;</li>
+			<li id="zoom_out">&nbsp;</li>
 		</ul><!-- .zoom_navigation -->
 		<ul class="shoe_data">
 			<li>Articulo: <span><%= @shoe.article_number %></span></li>
