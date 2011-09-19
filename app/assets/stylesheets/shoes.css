@@ -41,6 +41,7 @@
 }
 
 #shoes_show #shoe_detail {
+    overflow: hidden;
 	position:relative;
 	float:left;
 	width:688px;
@@ -49,6 +50,26 @@
 	border-style: dashed;	
 	border-color: rgb(244, 251, 255); /* Fallback */
 	border-color: rgba(244, 251, 255, 0.6); /* Fallback */
+}
+
+#shoes_show #shoe_photo {
+     overflow: hidden;
+}
+
+#shoes_show #shoe_photo img {
+    position: relative;
+    left: 0px;
+    top: 0px;
+	width:688px;
+	height:398px;
+}
+
+#shoes_show #shoe_photo img.big {
+    position: relative;
+    left: -260px;
+    top: -160px;
+	width:1191px;
+	height:737px;
 }
 
 #shoes_show #shoe_detail ul {
