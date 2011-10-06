@@ -27,8 +27,8 @@ class ShoesController < ApplicationController
   end
 
   def set_scope
-    if params[:scope].to_s == 'trend'
-      @scope = Shoe.trend
+    if params[:scope] == "trend"
+      @scope = Shoe.trend.order(:article_number)
     else
       @search = Shoe.order(:article_number).search(:heel_equals => @shoe.heel)
       @scope = @search

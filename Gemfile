@@ -4,9 +4,6 @@ gem 'rails', '3.1.0'
 gem 'execjs'
 gem 'therubyracer'
 
-# Bundle edge Rails instead:
-# gem 'rails',     :git => 'git://github.com/rails/rails.git'
-
 gem 'sqlite3', :group => [:test, :development]
 gem 'pg', :group => :production # requested by heroku
 
@@ -29,7 +26,6 @@ group :development do
   gem 'heroku'
   gem 'taps'
 end
-
 
 group :development, :test do
   gem 'sqlite3'
