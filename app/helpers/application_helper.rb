@@ -3,7 +3,11 @@ module ApplicationHelper
   # Returns a string concatenating current controller#action
   # @return [String] :controller_:action
   def body_id
-   "#{params[:controller]}_#{params[:action]}"
+    if params[:scope] == "trend"
+      "shoes_trend"
+    else
+      "#{params[:controller]}_#{params[:action]}"
+    end
   end
 
   # Renders link to shoes#index filtering
