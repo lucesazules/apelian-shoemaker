@@ -9,6 +9,7 @@ gem 'pg', :group => :production # requested by heroku
 
 gem 'activeadmin'
 gem 'meta_search', '>= 1.1.0.pre'
+gem 'cocoon'
 
 gem 'paperclip'
 gem 'aws-s3'

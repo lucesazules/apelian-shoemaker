@@ -54,12 +54,15 @@
 					</ul><!-- #formpart_04 -->
 				</li><!-- #form_pannel_01 -->
               <%- end -%>
-              <%= f.inputs :for => :order_details do |od| %>
-                  <%= od.input :shoe, :label => "Articulo" %>
-                  <%= od.input :sizes, :as => :check_boxes, :collection => Size.all.map{|s|[s.number,s.id]}, :label => "Talle" %>
-                  <%= od.input :color, :collection => Color.all.map{|c|[c.name,c.id]}, :label => "Color" %>
-                  <%= od.input :quantity, :label => "Pares" %>
-              <%- end -%>
+              <h3>Detalle de productos</h3>
+              <div id="order_details">
+                <%= f.semantic_fields_for :order_details do |od| %>
+                    <%= render 'order_detail_fields', :f => od %>
+                <%- end -%>
+                <div class="links">
+                  <%= link_to_add_association 'agregar producto', f, :order_details %>
+                </div>
+              </div>
               <%= f.buttons do %>
                 <%= f.commit_button "Enviar  &rarr;".html_safe %>
               <%- end -%>

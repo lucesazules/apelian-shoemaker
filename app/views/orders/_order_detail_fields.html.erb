@@ -1,0 +1,9 @@
+<div class="nested-fields">
+  <%= f.inputs do %>
+      <%= f.input :shoe, :label => "Articulo" %>
+      <%= f.input :sizes, :as => :check_boxes, :collection => Size.all.map{|s|[s.number,s.id]}, :label => "Talle" %>
+      <%= f.input :color, :collection => Color.all.map{|c|[c.name,c.id]}, :label => "Color" %>
+      <%= f.input :quantity, :label => "Pares" %>
+      <%= link_to_remove_association 'eliminar producto', f %>
+  <%- end -%>
+</div>
