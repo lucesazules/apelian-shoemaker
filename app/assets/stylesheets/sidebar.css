@@ -55,9 +55,29 @@ body #sidebar .logo {
 	background: rgba(133, 153, 44, 0.7);
 }
 
+#shoes_index #sidebar ul li:hover {
+	background: rgb(0, 122, 66); /* Fallback */
+	background: rgba(0, 190, 60, 0.7);
+}
+
+#shoes_index #sidebar ul li:active {
+	background: rgb(0, 122, 66); /* Fallback */
+  	background: rgba(133, 153, 44, 0.7);
+}
+
 #shoes_shoes #sidebar ul .selected {
 	background: rgb(133, 153, 44); /* Fallback */
 	background: rgba(133, 153, 44, 0.7);	
+}
+
+#shoes_shoes #sidebar ul li:hover {
+	background: rgb(133, 153, 44); /* Fallback */
+	background: rgba(133, 153, 44, 0.7);
+}
+
+#shoes_shoes #sidebar ul li:active {
+	background: rgb(0, 122, 66); /* Fallback */
+  	background: rgba(0, 122, 66, 0.7);
 }
 
 #shoes_trend #sidebar ul li {
