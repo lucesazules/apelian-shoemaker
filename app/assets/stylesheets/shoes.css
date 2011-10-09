@@ -114,7 +114,16 @@
 	display:block;
 	width:15px;
 	height:20px;
-	background:url('icon_arrow_black_right.png');
+	background-image: url('icon_sprite_pagenav.png');
+	background-position: -15px 0;
+}
+
+#shoes_show .page_navigation li.right:hover {
+	background-position: -15px -20px;
+}
+
+#shoes_show .page_navigation li.right:active {
+	background-position: -15px -40px;
 }
 
 #shoes_show .page_navigation li.left {
@@ -125,7 +134,21 @@
 	display:block;
 	width:15px;
 	height:20px;
-	background-image: url('icon_arrow_black_left.png');
+	background-image: url('icon_sprite_pagenav.png');
+	background-position: 0 0;
+}
+
+#shoes_show .page_navigation li.left:hover {
+	background-position: 0 -20px;
+}
+
+#shoes_show .page_navigation li.left:active {
+	background-position: 0 -40px;
+}
+
+/* bugfix (image inside link over background sprites)*/
+#shoes_show .page_navigation li.right a img, #shoes_show .page_navigation li.left a img  {
+	visibility:hidden;
 }
 
 /* zoom navigation */
@@ -147,12 +170,30 @@
 }
 
 #shoes_show .zoom_navigation li:first-child {
-	background-image: url('icon_plus_black.png');
+	background-image: url('icon_sprite_zoom.png');
+	background-position: 0 0;
 	margin-right:5px;
 }
 
+#shoes_show .zoom_navigation li:first-child:hover {
+	background-position: 0 -27px;
+}
+
+#shoes_show .zoom_navigation li:first-child:active {
+	background-position: 0 -54px;
+}
+
 #shoes_show .zoom_navigation li:last-child {
-	background-image: url('icon_minus_black.png');
+	background-image: url('icon_sprite_zoom.png');
+	background-position: -27px 0;
+}
+
+#shoes_show .zoom_navigation li:last-child:hover {
+	background-position: -27px -27px;
+}
+
+#shoes_show .zoom_navigation li:last-child:active {
+	background-position: -27px -54px;
 }
 
 /* shoe data */
@@ -208,7 +249,7 @@
 	margin-right:0px;	
 }
 
-/* shoes trend show */ /*Test Changes From Here */
+/* shoes trend show */
 
 #shoes_trend #inner_content {
 
@@ -306,7 +347,16 @@
 	display:block;
 	width:15px;
 	height:20px;
-	background:url('icon_arrow_black_right.png');
+	background-image:url('icon_sprite_pagenav.png');
+	background-position: -15px 0;
+}
+
+#shoes_trend .page_navigation li.right:hover {
+	background-position: -15px -20px;
+}
+
+#shoes_trend .page_navigation li.right:active {
+	background-position: -15px -40px;
 }
 
 #shoes_trend .page_navigation li.left {
@@ -317,7 +367,21 @@
 	display:block;
 	width:15px;
 	height:20px;
-	background-image: url('icon_arrow_black_left.png');
+	background-image:url('icon_sprite_pagenav.png');
+	background-position: 0 0;
+}
+
+#shoes_trend .page_navigation li.left:hover {
+	background-position: 0 -20px;
+}
+
+#shoes_trend .page_navigation li.left:active {
+	background-position: 0 -40px;
+}
+
+/* bugfix (image inside link over background sprites)*/
+#shoes_trend .page_navigation li.right a img, #shoes_trend .page_navigation li.left a img  {
+	visibility:hidden;
 }
 
 /* zoom navigation */
@@ -339,12 +403,30 @@
 }
 
 #shoes_trend .zoom_navigation li:first-child {
-	background-image: url('icon_plus_black.png');
+	background-image: url('icon_sprite_zoom.png');
+	background-position: 0 0;
 	margin-right:5px;
 }
 
+#shoes_trend .zoom_navigation li:first-child:hover {
+	background-position: 0 -27px;
+}
+
+#shoes_trend .zoom_navigation li:first-child:active {
+	background-position: 0 -54px;
+}
+
 #shoes_trend .zoom_navigation li:last-child {
-	background-image: url('icon_minus_black.png');
+	background-image: url('icon_sprite_zoom.png');
+	background-position: -27px 0;
+}
+
+#shoes_trend .zoom_navigation li:last-child:hover {
+	background-position: -27px -27px;
+}
+
+#shoes_trend .zoom_navigation li:last-child:active {
+	background-position: -27px -54px;
 }
 
 /* shoe data */
