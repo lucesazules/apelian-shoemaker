@@ -43,6 +43,44 @@ header .navigation li a span { /* ToDo: DRY this up */
   	background: rgba(25, 25, 25, 0.7);
 }
 
+/* Season Select PullDown */
+
+#season_select {
+	display:none;
+	position: absolute;
+	z-index: 1000;
+	top:80px;
+}
+
+#season_select.show {
+	display: block;
+}
+
+#season_select li {
+	border-width: 1px;
+	border-style: dashed;
+	border-color: rgb(255, 252, 0); /* Fallback */
+	background: rgb(0, 122, 66); /* Fallback */
+  	background: rgba(0, 122, 66, 0.7);
+	border-bottom:0px;
+}
+
+#season_select li:last-child {
+	border-bottom:1px dashed rgb(255, 252, 0);
+}
+
+#season_select li:hover {
+	background: rgb(0, 122, 66); /* Fallback */
+  	background: rgba(0, 190, 60, 0.7);
+}
+
+#season_select li:active {
+	background: rgb(0, 122, 66); /* Fallback */
+  	background: rgba(0, 122, 66, 0.7);
+}
+
+
+
 /* Disable link / not in IE */
 
 header .navigation li a {

@@ -6,10 +6,16 @@
 	left:0px;
 }
 
+#pages_landing img[alt="Img_shoe_outline"] {
+	position:absolute;
+	top:20px;
+	left:496px;
+}
+
 #pages_landing #entrar {
 	position:absolute;
-	top:280px;
-	left:0px;
+	top:358px;
+	left:6px;
 	display:block;
 	width:98px;
 	height:15px;
@@ -17,11 +23,23 @@
 	background-position: 0 0;
 }
 
+#pages_landing #entrar:hover {
+	background-position: 0 -15px;
+}
+
+#pages_landing #entrar:active {
+	background-position: 0 -30px;
+}
+
 #pages_landing #sidebar {
 	display:none;
 }
 
 #pages_landing header .navigation {
+	display:none;
+}
+
+#pages_landing footer img[alt="Icon_mail"] {
 	display:none;
 }
 
