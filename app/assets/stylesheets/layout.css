@@ -15,6 +15,14 @@ body ul{
 
 /* Background Styles */
 
+#pages_landing {
+		background: #000 url('bg_escalator_red.jpg') no-repeat top left fixed;
+		-webkit-background-size: cover;
+	    -moz-background-size: cover;
+	    -o-background-size: cover;
+	    background-size: cover;
+}
+
 #pages_index {
 		background: #000 url('bg_escalator_green.jpg') no-repeat top left fixed;
 		-webkit-background-size: cover;

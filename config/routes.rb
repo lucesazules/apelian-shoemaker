@@ -9,6 +9,7 @@ ApelianShoemaker::Application.routes.draw do
   resources :orders
 
   match "contact" => "pages#contact", :as => :contact
+  match "landing" => "pages#landing", :as => :landing 
 
   ActiveAdmin.routes(self)
 

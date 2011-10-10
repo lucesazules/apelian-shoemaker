@@ -1,3 +1,30 @@
+/* pages#landing */
+
+#pages_landing img[alt="Logo_apelian_w337px"] {
+	position:absolute;
+	top:20px;
+	left:0px;
+}
+
+#pages_landing #entrar {
+	position:absolute;
+	top:280px;
+	left:0px;
+	display:block;
+	width:98px;
+	height:15px;
+	background-image: url('icon_sprite_enter.png');
+	background-position: 0 0;
+}
+
+#pages_landing #sidebar {
+	display:none;
+}
+
+#pages_landing header .navigation {
+	display:none;
+}
+
 /* pages#index */
 
 #pages_index img[alt="Text_intro"] {
@@ -5,6 +32,8 @@
 	top:20px;
 	left:258px;
 }
+
+/* pages#contact */
 
 #pages_contact #inner_content {
 		width:811px;
@@ -17,8 +46,6 @@
 		background: rgb(150, 150, 150); /* Fallback */
 	  	background: rgba(150, 150, 150, 0.3);
 }
-
-/* pages#contact */
 
 #pages_contact #inner_content h4 {
 	font-family: Helvetica, Arial, sans-serif;
