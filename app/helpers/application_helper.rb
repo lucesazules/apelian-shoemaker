@@ -26,14 +26,14 @@ module ApplicationHelper
     end
 
 
-    campaign_name = params[:campaign].blank?? CURRENT_CAMPAIGN : params[:campaign]
+    campaign_name = params[:campaign].blank?? @current_campaign : params[:campaign]
     link_to content_tag( :span, text), shoes_path(:search => { :heel_eq => heel}, :campaign => campaign_name)
   end
 
   # Returns campaign that is currently beign navigated on webpage
   # @return [String] chosen campaign.
   def navigating_campaign
-    params[:campaign].blank?? CURRENT_CAMPAIGN : params[:campaign]
+    params[:campaign].blank?? @current_campaign : params[:campaign]
   end
 
   # Returns current filtered heel or nil if no heel in filter

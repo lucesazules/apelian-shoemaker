@@ -1,5 +1,10 @@
 ApelianShoemaker::Application.routes.draw do
 
+
+  namespace :admin do
+    resource :current_campaign, :only => [:edit, :update], :controller => :current_campaign
+  end
+
   resources :shoes do
     collection do
       get :trend

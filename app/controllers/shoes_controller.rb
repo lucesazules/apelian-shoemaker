@@ -4,7 +4,7 @@ class ShoesController < ApplicationController
   before_filter :set_scope, :only => :show
 
   def index
-    campaign_name = params[:campaign].blank?? CURRENT_CAMPAIGN : params[:campaign]
+    campaign_name = params[:campaign].blank?? @current_campaign : params[:campaign]
     @search = Shoe.by_campaign(campaign_name).search(params[:search])
     @shoes = @search.page(params[:page]).per(18)
   end

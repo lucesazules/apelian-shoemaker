@@ -84,6 +84,7 @@ ActiveAdmin.setup do |config|
   # Active Admin resources from here. 
   #
   # config.before_filter :do_something_awesome
+  config.before_filter :set_current_campaign
 
 
   # == Register Stylesheets & Javascripts

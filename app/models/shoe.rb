@@ -55,7 +55,7 @@ class Shoe < ActiveRecord::Base
     where(:year => q_year, :season_name => q_season_name)
   end
   def self.current_campaign
-    self.by_campaign(CURRENT_CAMPAIGN)
+    self.by_campaign(@current_campaign)
   end
 
   has_attached_file :photo,
