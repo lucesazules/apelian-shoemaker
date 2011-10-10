@@ -6,3 +6,7 @@
 $(document).ready ->
   $('#zoom_in').click -> $('#shoe_photo > img').attr 'class', 'big'
   $("#zoom_out").click -> $('#shoe_photo > img').attr 'class', ''
+
+  $("#campaign-selector").change ->
+    new_location = "/shoes?campaign=" + $(this).val()
+    window.location=new_location

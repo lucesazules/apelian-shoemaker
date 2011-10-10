@@ -54,6 +54,9 @@ class Shoe < ActiveRecord::Base
     q_year, q_season_name = parse_campaign_name(campaign)
     where(:year => q_year, :season_name => q_season_name)
   end
+  def self.current_campaign
+    self.by_campaign(CURRENT_CAMPAIGN)
+  end
 
   has_attached_file :photo,
                     :styles => { :medium => "300x300>", :thumb => "124x124>" },

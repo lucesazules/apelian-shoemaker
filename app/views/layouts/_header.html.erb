@@ -6,5 +6,6 @@
 	<li>TEL: 15-5005-3360</li>
 </ul><!-- .contact_data -->
 <ul class="navigation">
-	<li><%= link_to(content_tag(:span, "CAMPAÑAS ANTERIORES"), trend_shoes_path) %></li>
+    <!-- <li><%= link_to(content_tag(:span, "CAMPAÑAS ANTERIORES"), trend_shoes_path) %></li> -->
+  <li><%= select_tag :campaign, options_for_select(Shoe.group(:season_name, :year).map{|s|s.campaign}, navigating_campaign), :id => "campaign-selector"%></li>
 </ul>

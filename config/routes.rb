@@ -8,14 +8,16 @@ ApelianShoemaker::Application.routes.draw do
 
   resources :orders
 
+
   match "contact" => "pages#contact", :as => :contact
-  match "landing" => "pages#landing", :as => :landing 
+  match "landing" => "pages#landing", :as => :landing
+  match "intro" => "pages#index", :as => :intro
 
   ActiveAdmin.routes(self)
 
   devise_for :admin_users, ActiveAdmin::Devise.config
 
-  root :to => "pages#index"
+  root :to => "pages#landing"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

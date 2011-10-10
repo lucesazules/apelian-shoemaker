@@ -3,7 +3,7 @@ production:
   access_key_id: "AKIAINBCXC7Y4PANEJOQ"
   secret_access_key: "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"
 development:
-  bucket: "apelian-dev"
+  bucket: "apelian-prod"
   access_key_id: "AKIAINBCXC7Y4PANEJOQ"
   secret_access_key: "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"
 test:

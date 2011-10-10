@@ -4,7 +4,8 @@ class ShoesController < ApplicationController
   before_filter :set_scope, :only => :show
 
   def index
-    @search = Shoe.order(:article_number).search(params[:search])
+    campaign_name = params[:campaign].blank?? CURRENT_CAMPAIGN : params[:campaign]
+    @search = Shoe.by_campaign(campaign_name).search(params[:search])
     @shoes = @search.page(params[:page]).per(18)
   end
 
@@ -12,6 +13,7 @@ class ShoesController < ApplicationController
     shoes = @scope.all
     @total_shoes = shoes.size
     cur_index = shoes.index(@shoe)
+    cur_index = 0 if cur_index.nil?
     @index = cur_index+1
     @previous_shoe = (cur_index-1 < 0)? nil : shoes[cur_index-1]
     @next_shoe = (cur_index+1 > @total_shoes)? nil : shoes[cur_index+1]
@@ -22,6 +24,7 @@ class ShoesController < ApplicationController
   end
 
   private
+
   def get_shoe
     @shoe = Shoe.find(params[:id], :include => [:colors, :sizes])
   end
@@ -30,7 +33,8 @@ class ShoesController < ApplicationController
     if params[:scope] == "trend"
       @scope = Shoe.trend.order(:article_number)
     else
-      @search = Shoe.order(:article_number).search(:heel_equals => @shoe.heel)
+      campaign_name = @shoe.campaign
+      @search = Shoe.by_campaign(campaign_name).order(:article_number).search(:heel_equals => @shoe.heel)
       @scope = @search
     end
   end
