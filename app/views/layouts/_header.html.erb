@@ -8,8 +8,8 @@
 <ul class="navigation">
 	<li id="season_select_button"><%= link_to(content_tag(:span, "CAMPAÑAS ANTERIORES"), trend_shoes_path) %></li>
   <ul id="season_select">
-      <%- Shoe.group(:season_name, :year).order(:year).each do |s| %>
-        <li><%= link_to(content_tag(:span, s.campaign), shoes_path(:campaign => s.campaign)) %></li>
+      <%- Shoe.all_campaigns.each do |s| %>
+        <li><%= link_to(content_tag(:span, s), shoes_path(:campaign => s)) %></li>
       <%- end %>
 	</ul>
 </ul>
