@@ -4,9 +4,8 @@ class Admin::CurrentCampaignController < ApplicationController
   end
 
   def update
-    a_config = YAML.load_file "#{Rails.root}/config/current_campaign.yml"
-    a_config["current_campaign"] = params[:campaign]
-    File.open("#{Rails.root}/config/current_campaign.yml", 'w') { |f| YAML.dump(a_config, f) }
+    a_config = AppConfig.first
+    a_config.update_attribute( :current_campaign, params[:campaign])
     redirect_to "/admin"
   end
 

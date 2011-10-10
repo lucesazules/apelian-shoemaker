@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   before_filter :set_current_campaign
 
   def set_current_campaign
-    a_config = YAML.load_file("#{Rails.root}/config/current_campaign.yml")
-    @current_campaign = a_config["current_campaign"]
+    a_config = AppConfig.first
+    @current_campaign = a_config.current_campaign
   end
 end
