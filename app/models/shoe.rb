@@ -41,7 +41,7 @@ class Shoe < ActiveRecord::Base
   # Returns array with all campaign names
   # @return [Array] campaigns
   def self.all_campaigns
-    self.select([:id,:season_name,:year]).group(:season_name,:year).order(:year).map{|s|s.campaign}
+    self.select([:season_name,:year]).group(:season_name,:year).order(:year).map{|s|s.campaign}
   end
 
   # @return [String] campaign name
