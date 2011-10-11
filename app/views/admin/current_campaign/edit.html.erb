@@ -1,4 +1,4 @@
 <%= form_for :current_campaign, :url => admin_current_campaign_path, :method => :put do |f| %>
-    <%= text_field_tag :campaign %>
+    <%= select_tag :campaign, options_for_select(Shoe.all_campaigns) %>
     <%= submit_tag "cambiar" %>
 <% end %>
