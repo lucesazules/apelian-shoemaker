@@ -2,7 +2,13 @@ module ApplicationHelper
 
 
   def pretty_campaign_name
-    name = params[:campaign]
+    if @shoe.nil?
+      # out of a shoe show selected campaign
+      name = params[:campaign]
+    else
+      # in a shoe show its campaign
+      name = @shoe.campaign
+    end
     return nil if name.blank?
     name.to_s.gsub('-','').upcase
   end
