@@ -1,13 +1,14 @@
 module ApplicationHelper
 
-
-  def pretty_campaign_name
-    if @shoe.nil?
-      # out of a shoe show selected campaign
-      name = params[:campaign]
-    else
-      # in a shoe show its campaign
-      name = @shoe.campaign
+  def pretty_campaign_name(name=nil)
+    if name.nil?
+      if @shoe.nil?
+        # out of a shoe show selected campaign
+        name = params[:campaign]
+      else
+        # in a shoe show its campaign
+        name = @shoe.campaign
+      end
     end
     return nil if name.blank?
     name.to_s.gsub('-','').upcase

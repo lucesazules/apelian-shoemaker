@@ -50,7 +50,7 @@ class Shoe < ActiveRecord::Base
 
   # @return [String] campaign name
   def campaign
-    "#{season_name} #{year}".upcase
+    "#{season_name}-#{year}"
   end
 
   # sets campaign name, year and season_name

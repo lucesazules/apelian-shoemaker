@@ -9,7 +9,7 @@
 	<li id="season_select_button"><%= link_to content_tag(:span, pretty_campaign_name || "CAMPAÑAS ANTERIORES"), "#" %></li>
   <ul id="season_select">
       <%- Shoe.all_campaigns.each do |s| %>
-        <li><%= link_to(content_tag(:span, s), shoes_path(:campaign => s)) %></li>
+        <li><%= link_to(content_tag(:span, pretty_campaign_name(s)), shoes_path(:campaign => s)) %></li>
       <%- end %>
 	</ul>
 </ul>
