@@ -24,8 +24,12 @@
 			<li><%= @index %>/<%= @total_shoes %></li>
 		</ul><!-- .catalog_page -->
 		<ul class="page_navigation">
-			<li class="right"><%= link_to(image_tag('icon_arrow_black_right.png'), shoe_path(:id => @next_shoe.id, :scope => params[:scope])) unless @next_shoe.nil? %></li>
-			<li class="left"><%= link_to(image_tag('icon_arrow_black_left.png'), shoe_path(:id => @previous_shoe.id, :scope => params[:scope])) unless @previous_shoe.nil? %></li>
+          <%- unless @next_shoe.nil? -%>
+            <li class="right"><%= link_to(image_tag('icon_arrow_black_right.png'), shoe_path(:id => @next_shoe.id, :scope => params[:scope])) %></li>
+          <%- end -%>
+          <%- unless @previous_shoe.nil? -%>
+            <li class="left"><%= link_to(image_tag('icon_arrow_black_left.png'), shoe_path(:id => @previous_shoe.id, :scope => params[:scope])) %></li>
+          <%- end -%>
 		</ul><!-- .page_navigation -->
 		<ul class="zoom_navigation">
 			<li id="zoom_in">&nbsp;</li>
