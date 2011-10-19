@@ -5,7 +5,7 @@ class ShoesController < ApplicationController
 
   def index
     campaign_name = params[:campaign].blank?? @current_campaign : params[:campaign]
-    @search = Shoe.by_campaign(campaign_name).search(params[:search])
+    @search = Shoe.order(:name).by_campaign(campaign_name).search(params[:search])
     @shoes = @search.page(params[:page]).per(18)
   end
 
@@ -20,7 +20,7 @@ class ShoesController < ApplicationController
   end
 
   def trend
-    @shoes = Shoe.trend.order(:article_number).page(params[:page]).per(18)
+    @shoes = Shoe.trend.order(:name).page(params[:page]).per(18)
   end
 
   private
@@ -31,10 +31,10 @@ class ShoesController < ApplicationController
 
   def set_scope
     if params[:scope] == "trend"
-      @scope = Shoe.trend.order(:article_number)
+      @scope = Shoe.trend.order(:name)
     else
       campaign_name = @shoe.campaign
-      @search = Shoe.by_campaign(campaign_name).order(:article_number).search(:heel_equals => @shoe.heel)
+      @search = Shoe.by_campaign(campaign_name).order(:name).search(:heel_equals => @shoe.heel)
       @scope = @search
     end
   end
