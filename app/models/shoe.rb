@@ -1,6 +1,8 @@
 # encoding: UTF-8
 class Shoe < ActiveRecord::Base
 
+  default_scope order(:name)
+
   validates_presence_of :article_number
   validates_presence_of :name
 
