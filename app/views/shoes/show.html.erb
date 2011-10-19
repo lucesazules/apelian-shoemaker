@@ -41,8 +41,8 @@
 		</ul><!-- .zoom_navigation -->
 		<ul class="shoe_data">
 			<li>Articulo: <span><%= @shoe.article_number %></span></li>
-			<li>Talles: <span><%= @shoe.sizes.map{|s|s.number}.join(',') %></span></li>
-			<li>Color: <span><%= @shoe.colors.map{|c|c.name}.join(',') %></span></li>
+			<li>Talles: <span><%= @shoe.sizes.map{|s|s.number}.join(', ') %></span></li>
+			<li>Color: <span><%= @shoe.colors.map{|c|c.name}.join(', ') %></span></li>
 		</ul><!-- .shoe_data -->
 	</div><!-- .shoe_detail -->
 </section>
