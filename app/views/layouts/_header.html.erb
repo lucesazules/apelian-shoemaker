@@ -6,7 +6,7 @@
 	<li>TEL: 15-5005-3360</li>
 </ul><!-- .contact_data -->
 <ul class="navigation">
-	<li id="season_select_button"><%= link_to(content_tag(:span, "CAMPAÑAS ANTERIORES"), trend_shoes_path) %></li>
+	<li id="season_select_button"><%= content_tag(:span, pretty_campaign_name || "CAMPAÑAS ANTERIORES") %></li>
   <ul id="season_select">
       <%- Shoe.all_campaigns.each do |s| %>
         <li><%= link_to(content_tag(:span, s), shoes_path(:campaign => s)) %></li>

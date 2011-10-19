@@ -1,5 +1,12 @@
 module ApplicationHelper
 
+
+  def pretty_campaign_name
+    name = params[:campaign]
+    return nil if name.blank?
+    name.to_s.gsub('-','').upcase
+  end
+
   # Returns a string concatenating current controller#action
   # @return [String] :controller_:action
   def body_id
