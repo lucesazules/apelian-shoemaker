@@ -11,7 +11,7 @@ module ApplicationHelper
       end
     end
     return nil if name.blank?
-    name.to_s.gsub('-','').upcase
+    name.to_s.gsub('-',' ').upcase
   end
 
   # Returns a string concatenating current controller#action
