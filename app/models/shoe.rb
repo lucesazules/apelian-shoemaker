@@ -79,6 +79,11 @@ class Shoe < ActiveRecord::Base
                     :s3_credentials => "#{Rails.root}/config/s3.yml",
                     :path => "shoe/photo_manual_thumb/:style/:id/:filename"
 
+
+  def as_json(options=nil)
+    super({:only => [:id,:article_number,:name], :include => {:sizes => {:only => [:id, :number]},:colors => {:only => [:id, :name]}}}.merge(options||{}))
+  end
+
   private
   # parses string to get season_name and year
   # @return [Array] [year, season_name]
