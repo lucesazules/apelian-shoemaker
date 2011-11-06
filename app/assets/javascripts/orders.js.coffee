@@ -7,7 +7,7 @@ $(document).ready ->
         i = $(this).attr('id').match(/(\d+)/)[1]
         $t = $(this)
         $color_select = $("#order_order_details_attributes_"+i+"_color_id")
-        $size_select = $("#order_order_details_attributes_"+i+"_size_ids_")
+        $size_select = $("#order_order_details_attributes_"+i+"_size_id")
         $.getJSON "/shoes/"+$(this).val()+".json", (data)->
             color_options = '<option value=""></option>'
             size_options = '<option value=""></option>'

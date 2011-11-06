@@ -3,13 +3,11 @@ class OrderDetail < ActiveRecord::Base
   belongs_to :order
   belongs_to :shoe
   belongs_to :color
+  belongs_to :size
 
-  has_many :order_details_sizeses, :class_name => "OrderDetailsSizes", :dependent => :destroy
-  has_many :sizes, :through => :order_details_sizeses
+  validates_presence_of :color, :shoe, :quantity, :size
 
-  validates_presence_of :color, :shoe, :quantity
-
-  validate :shoe_comes_in_chosen_sizes
+  validate :shoe_comes_in_chosen_size
   validate :shoe_comes_in_chosen_colors
 
   private
@@ -19,11 +17,9 @@ class OrderDetail < ActiveRecord::Base
     end
   end
 
-  def shoe_comes_in_chosen_sizes
-    self.sizes.each do |s|
-      unless self.shoe.sizes.include?(s)
-        self.errors.add(:sizes, "No tenemos este articulo en el talle #{s.number}")
-      end
+  def shoe_comes_in_chosen_size
+    unless self.shoe.sizes.include?(self.size)
+      self.errors.add(:sizes, "No tenemos este articulo en el talle #{s.number}")
     end
   end
 
